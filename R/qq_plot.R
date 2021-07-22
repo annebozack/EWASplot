@@ -21,5 +21,5 @@ qq_plot = function(pvector){
 	o = -log10(sort(pvector, decreasing = FALSE))
 	e = -log10(ppoints(length(pvector)))
 	df = data.frame(o = o, e = e)
-	ggplot2::ggplot(df, aes(e, o)) + geom_point(alpha = 0.5, size = 1) + geom_abline(intercept = 0, slope = 1, color = '#AB3428') + labs(y = expression(Observed ~ ~-log[10](italic(p))), x = expression(Expected ~ ~-log[10](italic(p)))) + theme_classic() + annotate("text", x = 1, y = (range(o)*0.9), label = paste0('lambda = ', l))
+	ggplot2::ggplot(df, aes(e, o)) + geom_point(alpha = 0.5, size = 1) + geom_abline(intercept = 0, slope = 1, color = '#AB3428') + labs(y = expression(Observed ~ ~-log[10](italic(p))), x = expression(Expected ~ ~-log[10](italic(p)))) + theme_classic() + annotate("text", x = 1, y = (range(o)[2]*0.9), label = paste0('lambda = ', l))
 }
