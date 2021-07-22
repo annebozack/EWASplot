@@ -1,0 +1,17 @@
+Package: EWASplot
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Anne",
+           family = "Bozack",
+           role = c("aut", "cre"),
+           email = "anne.bozack@gmail.com",
+           comment = c(ORCID = "0000-0003-0046-5767"))
+Description: Functions to create Q-Q plots, volcano plots, and Manhattan plots for EWAS studies.
+License: 
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports:
+	ggplot2
