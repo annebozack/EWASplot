@@ -16,7 +16,7 @@ lambda = function(p) {
 #' @param pvector Vector of p-values
 #' @return Q-Q plot
 #' @export
-qqplot = function(pvector){
+qq_plot = function(pvector){
 	l = round(lambda(pvector), 3)
 	o = -log10(sort(pvector, decreasing = FALSE))
 	e = -log10(ppoints(length(pvector)))
