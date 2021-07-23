@@ -105,8 +105,8 @@ manhattan_plot = function(probe, region = NULL, array = c('450K', 'EPIC'), FDR =
     	manhattan = manhattan + ggplot2::labs(title = title)
     }
     # p-value cutoffs
-    if (min(don$adj.P.Val.bonf) < 0.05){
-    	manhattan = manhattan + ggplot2::	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=size.line.sig)
+    if (min(don$bonf) < 0.05){
+    	manhattan = manhattan + ggplot2::geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=size.line.sig)
     }	
     if (FDR == TRUE){
     	manhattan = manhattan + ggplot2::geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=size.line.sig, linetype = "dashed")
