@@ -35,11 +35,11 @@ manhattan_plot = function(probe, region = NULL, array = c('450K', 'EPIC'), FDR =
 	
 	# Adding chr and pos if not provided
 	if (!('chr' %in% colnames(probe))){
-		if (array = '450K'){
+		if (array == '450K'){
 			data(Locations, package = 'IlluminaHumanMethylation450kanno.ilmn12.hg19')
 			probe = cbind(probe, Locations[,c('chr', 'pos')][match(probe$cpg, rownames(Locations))])
 		}
-		if (array = 'EPIC'){
+		if (array == 'EPIC'){
 			data(Locations, package = 'IlluminaHumanMethylationEPICanno.ilm10b4.hg19')
 			probe = cbind(probe, Locations[,c('chr', 'pos')][match(probe$cpg, rownames(Locations))])
 		}

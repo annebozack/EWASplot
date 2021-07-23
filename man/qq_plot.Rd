@@ -2,7 +2,7 @@
 % Please edit documentation in R/qq_plot.R
 \name{qq_plot}
 \alias{qq_plot}
-\title{Plot Q-Q plot}
+\title{Q-Q plot}
 \usage{
 qq_plot(pvector)
 }

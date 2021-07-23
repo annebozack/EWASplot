@@ -1,641 +1,1169 @@
-Zn = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Zn/Zn_log2_DMP_adj.csv')#
-Zn = Hg_F[Zn$chr == 'chr6' & Zn$pos >= 33245700 & Zn$pos <= 33246008,]#
-Zn$analysis = 'Zn'
-Zn
-Zn = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Zn/Zn_log2_DMP_adj.csv')#
-Zn = An[Zn$chr == 'chr6' & Zn$pos >= 33245700 & Zn$pos <= 33246008,]#
-Zn$analysis = 'Zn'
-Zn = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Zn/Zn_log2_DMP_adj.csv')#
-Zn = Zn[Zn$chr == 'chr6' & Zn$pos >= 33245700 & Zn$pos <= 33246008,]#
-Zn$analysis = 'Zn'
-Zn
-chr6All = rbind(As_M, Cd, Cr, Cr_F, Cs, Cs_F, Cs_M, Hg, Hg_F, Hg_M, Mg, Zn, Zn_M)
-chr6All$dmr = NA#
-for (i in 1:nrow(chr6dmr)){#
-	chr6All$dmr[chr6All$pos >= chr6dmr$start[i] & chr6All$pos <= chr6dmr$end[i] & chr6All$analysis == chr6dmr$analysis[i]] = i#
-}
-chr6All
-nrow(chr6dmr)
-chr6All$dmr = NA#
-for (i in 1:24){#
-	chr6All$dmr[chr6All$pos >= chr6dmr$start[i] & chr6All$pos <= chr6dmr$end[i] & chr6All$analysis == chr6dmr$analysis[i]] = i#
-}
-chr6All
-i = 4
-chr6All[chr6All$pos >= chr6dmr$start[i] & chr6All$pos <= chr6dmr$end[i] & chr6All$analysis == chr6dmr$analysis[i],]
-chr6All[chr6All$pos >= chr6dmr$start[i] & chr6All$pos <= chr6dmr$end[i],]
-chr6All[chr6All$pos >= chr6dmr$start[i],]
-chr6All[chr6All$pos <= chr6dmr$end[i],]
-chr6dmr[4,]
-Cr_F
-chr6dmr
-Cr_F = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Cr_F/Cr_log2_DMP_adj.csv')#
-Cr_F = Cr_F[Cr_F$chr == 'chr6' & Cr_F$pos >= 31148369 & Cr_F$pos <= 31148666,]#
-Cr_F$analysis = 'Cr_F'
-Cs = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Cs/Cs_log2_DMP_adj.csv')#
-Cs = Cs[(Cs$chr == 'chr6' & Cs$pos >= 33280051 & Cs$pos <= 33280478) | (Cs$chr == 'chr6' & Cs$pos >= 28601268 & Cs$pos <= 28601519) | (Cs$chr == 'chr6' & Cs$pos >= 32847440 & Cs$pos <= 32847845) | (Cs$chr == 'chr6' & Cs$pos >= 30881315 & Cs$pos <= 30881842) | (Cs$chr == 'chr6' & Cs$pos >= 31651019 & Cs$pos <= 31651029),]#
-Cs$analysis = 'Cs'
-Cs_F = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Cs_F/Cs_log2_DMP_adj.csv')#
-Cs_F = Cs_F[Cs_F$chr == 'chr6' & Cs_F$pos >= 32847761 & Cs_F$pos <= 32847830,]#
-Cs_F$analysis = 'Cs_F'
-Cs_M = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Cs_M/Cs_log2_DMP_adj.csv')#
-Cs_M = Cs_M[(Cs_M$chr == 'chr6' & Cs_M$pos >= 31650734 & Cs_M$pos <= 31651362) | (Cs_M$chr == 'chr6' & Cs_M$pos >= 28601268 & Cs_M$pos <= 28601519) | (Cs_M$chr == 'chr6' & Cs_M$pos >= 30881463 & Cs_M$pos <= 30881766) | (Cs_M$chr == 'chr6' & Cs_M$pos >= 28446839 & Cs_M$pos <= 28447115) | (Cs_M$chr == 'chr6' & Cs_M$pos >= 32847761 & Cs_M$pos <= 32847830),]#
-Cs_M$analysis = 'Cs_M'
-Hg = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Hg/Hg_log2_DMP_adj.csv')#
-Hg = Hg[Hg$chr == 'chr6' & Hg$pos >= 30039373 & Hg$pos <= 30039548,]#
-Hg$analysis = 'Hg'
-Hg_F = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Hg_F/Hg_log2_DMP_adj.csv')#
-Hg_F = Hg_F[Hg_F$chr == 'chr6' & Hg_F$pos >= 31508105 & Hg_F$pos <= 31508137,]#
-Hg_F$analysis = 'Hg_F'
-Hg_M = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Hg_M/Hg_log2_DMP_adj.csv')#
-Hg_M = Hg_M[(Hg_M$chr == 'chr6' & Hg_M$pos >= 31650785 & Hg_M$pos <= 31651362) | (Hg_M$chr == 'chr6' & Hg_M$pos >= 30039141 & Hg_M$pos <= 30039548),]#
-Hg_M$analysis = 'Hg_M'
-Mg = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Mg/Mg_log2_DMP_adj.csv')#
-Mg = Mg[(Mg$chr == 'chr6' & Mg$pos >= 30039174 & Mg$pos <= 30039548) | (Mg$chr == 'chr6' & Mg$pos >= 32063990 & Mg$pos <= 32064258) | ,]#
-Mg$analysis = 'Mg'
-Mg = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Mg/Mg_log2_DMP_adj.csv')#
-Mg = Mg[(Mg$chr == 'chr6' & Mg$pos >= 30039174 & Mg$pos <= 30039548) | (Mg$chr == 'chr6' & Mg$pos >= 32063990 & Mg$pos <= 32064258),]#
-Mg$analysis = 'Mg'
-Mn = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Mn/Mn_log2_DMP_adj.csv')#
-Mn = Mn[(Mn$chr == 'chr6' & Mn$pos >= 32063725 & Mn$pos <= 32064161),]#
-Mn$analysis = 'Mn'
-Zn = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Zn/Zn_log2_DMP_adj.csv')#
-Zn = Zn[Zn$chr == 'chr6' & Zn$pos >= 32165175 & Zn$pos <= 32165200,]#
-Zn$analysis = 'Zn'#
+table(DMP_unadj$P.Value < 0.05)#
+# FALSE   TRUE #
+# 304576  89884#
 #
-Zn_M = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Zn_M/Zn_log2_DMP_adj.csv')#
-Zn_M = Zn_M[Zn_M$chr == 'chr6' & Zn_M$pos >= 31651019 & Zn_M$pos <= 31651029,]#
-Zn_M$analysis = 'Zn_M'
-chr6All = rbind(As_M, Cd, Cr, Cr_F, Cs, Cs_F, Cs_M, Hg, Hg_F, Hg_M, Mg, Mn, Zn, Zn_M)
-chr6All$dmr = NA#
-for (i in 1:24){#
-	chr6All$dmr[chr6All$pos >= chr6dmr$start[i] & chr6All$pos <= chr6dmr$end[i] & chr6All$analysis == chr6dmr$analysis[i]] = i#
-}
-chr6All
-chr6dmr = dmrAll[dmrAll$chr == '6' & dmrAll$end < 40000000,]
-chr6dmr
-dim(chr6dmr)
-chr6All[is.na(chr6All$dmr),]
-i = 15
-chr6All[chr6All$pos >= chr6dmr$start[i] & chr6All$pos <= chr6dmr$end[i] & chr6All$analysis == chr6dmr$analysis[i],]
-chr6dmr$start[i]
-chr6dmr$end[i]
-chr6dmr$analysis[i]
-Cs_M = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Cs_M/Cs_log2_DMP_adj.csv')#
-Cs_M = Cs_M[(Cs_M$chr == 'chr6' & Cs_M$pos >= 31650734 & Cs_M$pos <= 31651362) | (Cs_M$chr == 'chr6' & Cs_M$pos >= 28601268 & Cs_M$pos <= 28601519) | (Cs_M$chr == 'chr6' & Cs_M$pos >= 30881463 & Cs_M$pos <= 30881766) | (Cs_M$chr == 'chr6' & Cs_M$pos >= 28446839 & Cs_M$pos <= 28447115) | (Cs_M$chr == 'chr6' & Cs_M$pos >= 32847761 & Cs_M$pos <= 32847830),]#
-Cs_M$analysis = 'Cs_M'#
+table(DMP_unadj$adj.P.Val < 0.05)#
+# FALSE   TRUE #
+# 351774  42686#
 #
-Cu_M = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Cu_M/Cu_log2_DMP_adj.csv')#
-Cu_M = Cu_M[Cu_M$chr == 'chr6' & Cu_M$pos >= 32847761 & Cu_M$pos <= 32847830,]#
-Cu_M$analysis = 'Cu_M'
-chr6All$dmr = NA#
-for (i in 1:24){#
-	chr6All$dmr[chr6All$pos >= chr6dmr$start[i] & chr6All$pos <= chr6dmr$end[i] & chr6All$analysis == chr6dmr$analysis[i]] = i#
-}
-chr6All
-chr6All = rbind(As_M, Cd, Cr, Cr_F, Cs, Cs_F, Cs_M, Hg, Hg_F, Hg_M, Mg, Mn, Zn, Zn_M)
-chr6All = rbind(As_M, Cd, Cr, Cr_F, Cs, Cs_F, Cs_M, Cu_M, Hg, Hg_F, Hg_M, Mg, Mn, Zn, Zn_M)
-chr6All$dmr = NA#
-for (i in 1:24){#
-	chr6All$dmr[chr6All$pos >= chr6dmr$start[i] & chr6All$pos <= chr6dmr$end[i] & chr6All$analysis == chr6dmr$analysis[i]] = i#
-}
-chr6All
-Cs_M = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Cs_M/Cs_log2_DMP_adj.csv')#
-Cs_M = Cs_M[(Cs_M$chr == 'chr6' & Cs_M$pos >= 31650734 & Cs_M$pos <= 31651362) | (Cs_M$chr == 'chr6' & Cs_M$pos >= 28601268 & Cs_M$pos <= 28601519) | (Cs_M$chr == 'chr6' & Cs_M$pos >= 30881463 & Cs_M$pos <= 30881766) | (Cs_M$chr == 'chr6' & Cs_M$pos >= 28446839 & Cs_M$pos <= 28447115),]#
-Cs_M$analysis = 'Cs_M'#
+table(DMP_unadj$adj.P.Val.bonf < 0.05)#
+ # FALSE   TRUE #
+# 394076    384 #
 #
-Cu_M = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/Cu_M/Cu_log2_DMP_adj.csv')#
-Cu_M = Cu_M[Cu_M$chr == 'chr6' & Cu_M$pos >= 32847761 & Cu_M$pos <= 32847830,]#
-Cu_M$analysis = 'Cu_M'
-chr6All = rbind(As_M, Cd, Cr, Cr_F, Cs, Cs_F, Cs_M, Cu_M, Hg, Hg_F, Hg_M, Mg, Mn, Zn, Zn_M)#
+DMP_unadj = cbind(DMP_unadj, anno[,'chr'][match(rownames(DMP_unadj), anno$Name)])#
+DMP_unadj = cbind(DMP_unadj, anno[,'pos'][match(rownames(DMP_unadj), anno$Name)])#
+DMP_unadj = cbind(DMP_unadj, anno[,'UCSC_RefGene_Name'][match(rownames(DMP_unadj), anno$Name)])#
+colnames(DMP_unadj)[c(12,13,14)] = c('chr', 'pos', 'gene')#
 #
-chr6All$dmr = NA#
-for (i in 1:24){#
-	chr6All$dmr[chr6All$pos >= chr6dmr$start[i] & chr6All$pos <= chr6dmr$end[i] & chr6All$analysis == chr6dmr$analysis[i]] = i#
-}
-chr6All
-chr6All$analysis_dmr = paste0(chr6All$analysis, '_', chr6All$dmr)
-ggplot(data = chr6All[chr6All$pos > 33000000,], aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_line(group = chr6All$analysis_dmr)
-ggplot(data = chr6All[chr6All$pos > 33000000,], aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_line(data = chr6All[chr6All$pos > 33000000,], aes(x = pos, y = logFC, group = analysis))
-chr6All$analysis_dmr
-ggplot(data = chr6All[chr6All$pos > 33000000,], aes(x = pos, y = logFC, colour = analysis)) + geom_point()
-chr6All$pos
-ggplot(data = chr6All, aes(x = pos, y = logFC, colour = analysis)) + geom_point()
-ggplot(data = chr6All[chr6All$pos < 29000000], aes(x = pos, y = logFC, colour = analysis)) + geom_point()
-ggplot(data = chr6All[chr6All$pos < 29000000,], aes(x = pos, y = logFC, colour = analysis)) + geom_point()
-ggplot(data = chr6All[chr6All$pos < 29000000 & chr6All$pos > 28550000,], aes(x = pos, y = logFC, colour = analysis)) + geom_point()
-ggplot(data = chr6All[chr6All$pos < 29000000 & chr6All$pos > 28550000,], aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_line(data = chr6All[chr6All$pos < 29000000 & chr6All$pos > 28550000,], aes(x = pos, y = logFC, group = analysis))
-head(chr6All)
-ggplot(data = chr6All[chr6All$pos < 29000000 & chr6All$pos > 28550000,], aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), width=.1) + geom_line(data = chr6All[chr6All$pos < 29000000 & chr6All$pos > 28550000,], aes(x = pos, y = logFC, group = analysis))
-ggplot(data = chr6All[chr6All$pos < 29000000 & chr6All$pos > 28550000,], aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R)) + geom_line(data = chr6All[chr6All$pos < 29000000 & chr6All$pos > 28550000,], aes(x = pos, y = logFC, group = analysis))
-ggplot(data = chr6All[chr6All$pos < 29000000 & chr6All$pos > 28550000,], aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R)) + geom_line(data = chr6All[chr6All$pos < 29000000 & chr6All$pos > 28550000,], aes(x = pos, y = logFC, group = analysis)) + theme_minimal()
-chr6All$pos
-hist(chr6All$pos)
-chr6All[chr6All$pos < 29000000 & chr6All$pos > 28500000,]
-levels(analysis_dmr)
-chr6dmr
-chr6dmr[order(chr6dmr$start),]
-chr6All$group[chr$pos <= 28500000] = 1
-chr6All$group[chr6All$pos <= 28500000] = 1
-chr6All$group[chr6All$pos > 28500000 & chr6All$pos <= 30000000] = 2
-chr6All$group[chr6All$pos > 30000000 & chr6All$pos <= 31000000] = 3
-chr6All$group[chr6All$pos > 31000000 & chr6All$pos <= 31500000] = 4
-chr6All$group[chr6All$pos > 31500000 & chr6All$pos <= 32000000] = 5
-chr6All$group[chr6All$pos > 32000000 & chr6All$pos <= 32100000] = 6
-chr6All$group[chr6All$pos > 32100000 & chr6All$pos <= 32900000] = 7
-chr6All$group[chr6All$pos > 32900000 & chr6All$pos <= 33300000] = 7
-chr6All$group[chr6All$pos > 32100000 & chr6All$pos <= 32900000] = 7
-chr6All$group[chr6All$pos > 32900000 & chr6All$pos <= 33300000] = 8
-table(chr6All$group)
-sum(table(chr6All$group))
-dim(chr6ll)
-dim(chr6All)
-ggplot(data = chr6All, aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R)) + geom_line(data = chr6All, aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + facet_grid(group~., nrow=1)
-ggplot(data = chr6All, aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R)) + geom_line(data = chr6All, aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + facet_grid(cols=vars(group))
-ggplot(data = chr6All, aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R)) + geom_line(data = chr6All, aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + facet_grid(cols=vars(group), scale = 'free_x')
-chr6All$group[chr6All$pos <= 28500000] = 1#
-chr6All$group[chr6All$pos > 28500000 & chr6All$pos <= 30000000] = 2#
-chr6All$group[chr6All$pos > 30000000 & chr6All$pos <= 31000000] = 3#
-chr6All$group[chr6All$pos > 30800000 & chr6All$pos <= 31000000] = 4#
-chr6All$group[chr6All$pos > 31000000 & chr6All$pos <= 31500000] = 5#
-chr6All$group[chr6All$pos > 31500000 & chr6All$pos <= 32000000] = 6#
-chr6All$group[chr6All$pos > 32000000 & chr6All$pos <= 32100000] = 7#
-chr6All$group[chr6All$pos > 32100000 & chr6All$pos <= 32900000] = 8#
-chr6All$group[chr6All$pos > 32900000 & chr6All$pos <= 33300000] = 9
-ggplot(data = chr6All, aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R)) + geom_line(data = chr6All, aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + facet_grid(cols=vars(group), scale = 'free_x')
-chr6All$analysis_dmr = paste0(chr6All$analysis, '_', chr6All$dmr)#
-chr6All$group[chr6All$pos <= 28500000] = 1#
-chr6All$group[chr6All$pos > 28500000 & chr6All$pos <= 30000000] = 2#
-chr6All$group[chr6All$pos > 30000000 & chr6All$pos <= 31000000] = 3#
-chr6All$group[chr6All$pos > 30800000 & chr6All$pos <= 31000000] = 4#
-chr6All$group[chr6All$pos > 31000000 & chr6All$pos <= 31500000] = 5#
-chr6All$group[chr6All$pos > 31500000 & chr6All$pos <= 31600000] = 6#
-chr6All$group[chr6All$pos > 31600000 & chr6All$pos <= 32000000] = 7#
-chr6All$group[chr6All$pos > 32000000 & chr6All$pos <= 32100000] = 8#
-chr6All$group[chr6All$pos > 32100000 & chr6All$pos <= 32200000] = 9#
-chr6All$group[chr6All$pos > 32200000 & chr6All$pos <= 32900000] = 10#
-chr6All$group[chr6All$pos > 32900000 & chr6All$pos <= 33250000] = 11#
-chr6All$group[chr6All$pos > 33250000 & chr6All$pos <= 33300000] = 12
-ggplot(data = chr6All, aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R)) + geom_line(data = chr6All, aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + facet_grid(cols=vars(group), scale = 'free_x')
-ggplot(data = chr6All, aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R)) + geom_line(data = chr6All, aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + facet_vars(cols=vars(group), scale = 'free_x')
-ggplot(data = chr6All, aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R)) + geom_line(data = chr6All, aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + facet_wrap(vars(group), scale = 'free_x')
-ggplot(data = chr6All, aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R)) + geom_line(data = chr6All, aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + facet_wrap(vars(group), scale = 'free')
-ggplot(data = chr6All, aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray') + geom_line(data = chr6All, aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + facet_grid(cols = vars(group), scale = 'free_x')
-ggplot(data = chr6All, aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_line(data = chr6All, aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + geom_hline(yintercept = 0) + facet_grid(cols = vars(group), scale = 'free_x')
-chr6All[chr6All$group == 3]
-chr6All[chr6All$group == 3,]
-dim(chr6All[chr6All$group == 3,])
-dim(chr6All[chr6All$gene == RNF39;RNF39,])
-dim(chr6All[chr6All$gene == 'RNF39;RNF39',])
-dim(chr6All[chr6All$gene == 'RNF39',])
-dim(chr6All[chr6All$group == 7,])
-(chr6All[chr6All$group == 7,])
-ggplot(data = chr6All, aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_line(data = chr6All, aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + geom_hline(yintercept = 0) + facet_grid(cols = vars(group), scale = 'free_x')
-dim(chr6All[chr6All$group == 8,])
-(chr6All[chr6All$group == 8,])
-ggplot(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_line(data = chr6All, aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + geom_hline(yintercept = 0)
-ggplot(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_line(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + geom_hline(yintercept = 0)
-ggplot(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray') + geom_line(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + geom_hline(yintercept = 0)
-ggplot(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 100) + geom_line(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + geom_hline(yintercept = 0)
-ggplot(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 10) + geom_line(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + geom_hline(yintercept = 0)
-ggplot(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, colour = analysis)) + geom_point() + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 5) + geom_line(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + geom_hline(yintercept = 0)
-ggplot(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, colour = analysis)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + geom_hline(yintercept = 0)
-ggplot(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, colour = analysis)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.5)
-ggplot(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, colour = analysis)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = chr6All[chr6All$group == 3,], aes(x = pos, y = logFC, group = analysis)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3)
-RNF39 = chr6All[chr6All$group == 3,]
-RNF39 = chr6All[chr6All$group == 3,]#
-RNF39$Exposure[RNF39$group == 'Cd'] = 'Cd'#
-RNF39$Exposure[RNF39$group == 'Hg'] = 'Hg'#
-RNF39$Exposure[RNF39$group == 'Hg_M'] = 'Hg, male'#
-RNF39$Exposure[RNF39$group == 'Mg'] = 'Mg'
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position")
-RNF39
-RNF39$Exposure[RNF39$analysis == 'Cd'] = 'Cd'#
-RNF39$Exposure[RNF39$analysis == 'Hg'] = 'Hg'#
-RNF39$Exposure[RNF39$analysis == 'Hg_M'] = 'Hg, male'#
-RNF39$Exposure[RNF39$analysis == 'Mg'] = 'Mg'
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position")
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom")
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.box.margin = margin(1,1,1,1))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.box.margin = margin(0,0,0,0))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.box.margin = margin(-1,-1,-1,-1))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.box.margin = margin(.1,.1,.1,.1))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.box.margin = margin(.1,.1,.1,.1)) + theme(margin(t = 0, r = 0, b = -5, l = 0, unit = "pt"))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.box.margin = margin(.1,.1,.1,.1)) + theme(plot.margin(t = 0, r = 0, b = -5, l = 0, unit = "pt"))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.box.margin = margin(.1,.1,.1,.1)) + theme(plot.margin = margin(t = 0, r = 0, b = -5, l = 0, unit = "pt"))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.box.margin = margin(.1,.1,.1,.1)) + theme(plot.margin = margin(t = 1, r = 1, b = -10, l = 1, unit = "pt"))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines")) + theme(plot.margin = margin(t = 1, r = 1, b = -10, l = 1, unit = "pt"))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=margin(0, "lines")) + theme(plot.margin = margin(t = 1, r = 1, b = -10, l = 1, unit = "pt"))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=margin(0, "lines"))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = logFC-CI.L, ymax = logFC+CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines"))
-RNF39
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = CI.L, ymax = CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines"))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = CI.L, ymax = CI.R), color = 'gray', width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines")) + scale_color_manual(values = c('#d73027', '#fdae61', '#abd9e9', '#4575b4'))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = CI.L, ymax = CI.R), size = 0.5, width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines")) + scale_color_manual(values = c('#d73027', '#fdae61', '#abd9e9', '#4575b4'))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = CI.L, ymax = CI.R), size = 0.2, width = 3) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines")) + scale_color_manual(values = c('#d73027', '#fdae61', '#abd9e9', '#4575b4'))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = CI.L, ymax = CI.R), size = 0.2, width = 3, alpha = 0.5) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines")) + scale_color_manual(values = c('#d73027', '#f46d43', '#74add1', '#4575b4'))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = CI.L, ymax = CI.R), size = 0.3, width = 4, alpha = 0.5) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines")) + scale_color_manual(values = c('#d73027', '#f46d43', '#74add1', '#4575b4'))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = CI.L, ymax = CI.R), size = 0.3, width = 4, alpha = 0.5) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines")) + scale_color_manual(values = c('#d73027', '#4575b4', '#74add1', '#f46d43'))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = CI.L, ymax = CI.R), size = 0.3, width = 4, alpha = 0.5) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines")) + scale_color_manual(values = c('#d73027', '#009B72', '#74add1', '#f46d43'))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = CI.L, ymax = CI.R), size = 0.3, width = 4, alpha = 0.5) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines")) + scale_color_manual(values = c('#d73027', '#4575b4', '#74add1', '#f46d43'))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = CI.L, ymax = CI.R), size = 0.3, width = 4, alpha = 0.5) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines")) + scale_color_manual(values = c('#d73027', '#4575b4', '#74add1', '#009B72'))
-ggplot(data = RNF39, aes(x = pos, y = logFC, colour = Exposure)) + geom_errorbar(aes(ymin = CI.L, ymax = CI.R), size = 0.3, width = 5, alpha = 0.5) + geom_point() + geom_line(data = RNF39, aes(x = pos, y = logFC, group = Exposure)) + theme_minimal() + geom_hline(yintercept = 0, size = 0.3) + labs(y = 'Effect estimate', x = "Chromosome 6 position") + theme(legend.position="bottom", legend.margin=unit(0, "lines")) + scale_color_manual(values = c('#d73027', '#4575b4', '#74add1', '#009B72'))
-quartz.save('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/combp_comparison/RNF39.png', type = "png", dpi = 300)
-library(rtools)
-install.packages(rtools)
-install.packages('rtools')
-library(rtools)
-install.packages('/Users/annebozack/Downloads/GAMP_0.11.tar.gz', repos = NULL, type="source")
-install.packages('/Users/annebozack/Downloads/GAMP', repos = NULL, type="source")
-install.packages('fda')
-install.packages('SKAT')
-install.packages('/Users/annebozack/Downloads/GAMP', repos = NULL, type="source")
-library(GAMP)
-manhattan_noChr = function(probe, region, FDR = FALSE, bonf = FALSE, annotate = NULL, title = NULL, ymax = 7){#
-# chromosome as numeric#
-probe$chr = as.numeric(gsub("chr", "", probe$chr))#
+DMP_unadj = DMP_unadj[order(DMP_unadj$P.Value),]#
 #
-# dataframes with common columns#
-probe = data.frame(name = probe$cpg, p = probe$P.Value, fdr = probe$adj.P.Val, bonf = probe$adj.P.Val.bonf, chr = probe$chr, pos = probe$pos, type = 'position', dmp_sig = NA, color = NA)#
-region_df = data.frame(name = as.character(seq(1:nrow(region))), p = NA, fdr = NA, bonf = NA, chr = region$chr, pos = region$start, type = 'region', dmp_sig = NA, color = NA, size = NA)#
-#
-# indicating probes within regions#
-for (i in 1:length(region$chr)){#
-	probe$dmp_sig[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = 1#
-}#
-#
-# variable for point color#
-probe$color[probe$dmp_sig == 1] = 50#
-probe$color[probe$fdr < 0.05] = 100#
-probe$color[is.na(probe$color)] = probe$chr[is.na(probe$color)]#
-#
-# variable for point size#
-probe$size[probe$color == 50 | probe$color == 100] = 1#
-probe$size[is.na(probe$size)] = 0.5#
-#
-# combine dataframes#
-df_comb = rbind(probe, region_df)#
-#
-# dataset for plotting#
-	don = df_comb %>% #
-  		# Compute chromosome size#
-			group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>% #
-  		# Calculate cumulative position of each chromosome#
- 			mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len) %>%#
-  		# Add this info to the initial dataset#
-  			left_join(df_comb, ., by=c("chr"="chr")) %>%#
-  		# Add a cumulative position of each site#
-			arrange(chr, pos) %>% mutate(poscum=pos+tot) # %>%#
- 		# Prepare X axis#
-			axisdf = don %>% group_by(chr) %>% summarize(center=(max(poscum) + min(poscum))/2)#
-	don = merge(don, df_comb, on='name', all.x=T)#
-	don = don[order(don$size),]#
-	don_position = don[don$type == 'position',]#
-	don_region = don[don$type == 'region',]#
-	colors = c("#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", '#2166ac', 'black')#
-	manhattan = ggplot(don_position, aes(x=poscum, y=-log10(p))) +#
-	geom_point(aes(color=as.factor(color)), size= don_position$size, alpha = don_position$size) + scale_color_manual(values = colors) +#
-    # p-value cutoffs#
-	geom_vline(xintercept= don_region$poscum, colour = '#4393c3', size=.2) +#
-	# custom axes:#
-	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don_position$poscum), max(don_position$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
-	scale_y_continuous(expand = c(0, 0), limits = c(0, ymax), breaks = seq(from = 0, to = ymax, by = 1)) + #
-	# Custom theme:#
-    theme_minimal() + theme( #
-	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), axis.text.x=element_blank(), panel.grid.major.y = element_line(colour = "darkgray", size = 0.1), axis.ticks.x = element_line(size = 0.25), text = element_text(size = 7.5), plot.margin = margin(t = -.3, r = 0.1, b = 0.1, l = 0.1, unit = "cm")) + #
-    labs(y=expression(-log[10](italic(p)))) + theme(axis.title.x = element_blank())#
-    if (!is.null(title)){#
-    	manhattan = manhattan + labs(title = title)+ theme(plot.title = element_text(vjust=-8))#
-    }#
-    if (FDR == TRUE){#
-    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don_position$p[don_position$fdr < 0.05])), colour='#AB3428', size=.2, alpha = 0.5)#
-    } #
-    if (bonf == TRUE){#
-    	manhattan = manhattan + geom_hline(yintercept=-log10(0.05/nrow(don_position)), colour = '#AB3428', size=.2, alpha = 0.5)#
-    } #
-    if (!is.null(annotate)){#
-		manhattan = manhattan + annotate("text", x = max(don_position$poscum)*0.05, y = max(-log10(don_position$p)), label = annotate, size = 4)#
-	}#
-return(manhattan)#
-}#
-manhattan_Chr = function(probe, region, FDR = FALSE, annotate = NULL, title = NULL){#
-# chromosome as numeric#
-probe$chr = as.numeric(gsub("chr", "", probe$chr))#
-#
-# dataframes with common columns#
-probe = data.frame(name = probe$cpg, p = probe$P.Value, fdr = probe$adj.P.Val, bonf = probe$adj.P.Val.bonf, chr = probe$chr, pos = probe$pos, type = 'position', dmp_sig = NA, color = NA)#
-region_df = data.frame(name = as.character(seq(1:nrow(region))), p = NA, fdr = NA, bonf = NA, chr = region$chr, pos = region$start, type = 'region', dmp_sig = NA, color = NA, size = NA)#
-#
-# indicating probes within regions#
-for (i in 1:length(region$chr)){#
-	probe$dmp_sig[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = 1#
-}#
-#
-# variable for point color#
-probe$color[probe$dmp_sig == 1] = 50#
-probe$color[probe$fdr < 0.05] = 100#
-probe$color[is.na(probe$color)] = probe$chr[is.na(probe$color)]#
-#
-# variable for point size#
-probe$size[probe$color == 50 | probe$color == 100] = 1#
-probe$size[is.na(probe$size)] = 0.5#
-#
-# combine dataframes#
-df_comb = rbind(probe, region_df)#
-#
-# dataset for plotting#
-	don = df_comb %>% #
-  		# Compute chromosome size#
-			group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>% #
-  		# Calculate cumulative position of each chromosome#
- 			mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len) %>%#
-  		# Add this info to the initial dataset#
-  			left_join(df_comb, ., by=c("chr"="chr")) %>%#
-  		# Add a cumulative position of each site#
-			arrange(chr, pos) %>% mutate(poscum=pos+tot) # %>%#
- 		# Prepare X axis#
-			axisdf = don %>% group_by(chr) %>% summarize(center=(max(poscum) + min(poscum))/2)#
-	don = merge(don, df_comb, on='name', all.x=T)#
-	don = don[order(don$size),]#
-	don_position = don[don$type == 'position',]#
-	don_region = don[don$type == 'region',]#
-	colors = c("#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", "#969696", "#737373", '#2166ac', 'black')#
-	manhattan = ggplot(don_position, aes(x=poscum, y=-log10(p))) +#
-	geom_point(aes(color=as.factor(color)), size= don_position$size, alpha = don_position$size) + scale_color_manual(values = colors) +#
-    # p-value cutoffs#
-	geom_hline(yintercept=-log10(0.05/nrow(don_position)), colour = '#AB3428', size=.2, alpha = 0.5) +#
-	geom_vline(xintercept= don_region$poscum, colour = '#4393c3', size=.2) +#
-	# custom axes:#
-	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don_position$poscum), max(don_position$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
-	scale_y_continuous(expand = c(0, 0), limits = c(0, ymax), breaks = seq(from = 0, to = ymax, by = 1)) + #
-	# Custom theme:#
-    theme_minimal() + theme( #
-	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_line(colour = "darkgray", size = 0.1), axis.ticks.x = element_line(size = 0.25), text = element_text(size = 7.5), plot.margin = margin(t = -.3, r = 0.1, b = 0.1, l = 0.1, unit = "cm")) + #
-    labs(y=expression(-log[10](italic(p))), x = 'Chromosome')#
-    if (!is.null(title)){#
-    	manhattan = manhattan + labs(title = title)+ theme(plot.title = element_text(vjust=-8))#
-    }#
-    if (FDR == TRUE){#
-    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don_position$p[don_position$fdr < 0.05])), colour='#AB3428', size=.2, alpha = 0.5, linetype = "dashed")#
-    } #
-    if (!is.null(annotate)){#
-		manhattan = manhattan + annotate("text", x = max(don_position$poscum)*0.05, y = max(-log10(don_position$p)), label = annotate, size = 4)#
-	}#
-return(manhattan)#
-}#
-# As#
-probe = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/EWAS results/DMP_As_Adj_noFish_012621.csv')[,-1]#
-region = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/combp_As/resu_combp.csv')#
-colnames(probe)[c(12,13)] = c('chr', 'pos')#
-quartz(width = 5.5, height = 2.5)#
-manAs = manhattan_noChr(probe, region, title = 'As')#
-quartz.save('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/manhattan_plots/manhattan_DMP_As_adj_noFish_020121.png', type = "png", dpi = 300)#
-#
-# Ba#
-region = data.frame(chr = NA, start = NA, end = NA, p = NA, length = NA, fdr = NA, sidak = NA, nprobe = NA)#
-probe = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/EWAS results/DMP_Ba_Adj_012621.csv')[,-1]#
-colnames(probe)[c(12,13)] = c('chr', 'pos')#
-quartz(width = 5.5, height = 2.5)#
-manBa = manhattan_noChr(probe, region, title = 'Ba')#
-quartz.save('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/manhattan_plots/manhattan_DMP_Ba_adj_020121.png', type = "png", dpi = 300)#
-#
-# Cd#
-region = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/combp_Cd/resu_combp.csv')#
-probe = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/EWAS results/DMP_Cd_Adj_012621.csv')[,-1]#
-colnames(probe)[c(12,13)] = c('chr', 'pos')#
-quartz(width = 5.5, height = 2.5)#
-manCd = manhattan_noChr(probe, region, title = 'Cd')#
-quartz.save('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/manhattan_plots/manhattan_DMP_Cd_adj_020121.png', type = "png", dpi = 300)#
-#
-# Cr#
-region = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/combp_Cr/resu_combp.csv')#
-probe = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/EWAS results/DMP_Cr_Adj_012621.csv')[,-1]#
-colnames(probe)[c(12,13)] = c('chr', 'pos')#
-quartz(width = 5.5, height = 2.5)#
-manCr = manhattan_noChr(probe, region, title = 'Cr')#
-quartz.save('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/manhattan_plots/manhattan_DMP_Cr_adj_020121.png', type = "png", dpi = 300)#
-#
-# Cs#
-region = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/combp_Cs/resu_combp.csv')#
-probe = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/EWAS results/DMP_Cs_Adj_012621.csv')[,-1]#
-colnames(probe)[c(12,13)] = c('chr', 'pos')#
-quartz(width = 5.5, height = 2.5)#
-manCs = manhattan_noChr(probe, region, title = 'Cs')#
-quartz.save('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/manhattan_plots/manhattan_DMP_Cs_adj_020121.png', type = "png", dpi = 300)#
-#
-# Cu#
-region = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/combp_Cu/resu_combp.csv')#
-probe = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/EWAS results/DMP_Cu_Adj_012621.csv')[,-1]#
-colnames(probe)[c(12,13)] = c('chr', 'pos')#
-quartz(width = 5.5, height = 2.5)#
-manCu = manhattan_Chr(probe, region, title = 'Cu')#
-quartz.save('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/manhattan_plots/manhattan_DMP_Cu_adj_020121.png', type = "png", dpi = 300)
-probe = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/As/As_log2_DMP_adj.csv')[,-1]#
-region = read.csv('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local/CordBlood/As/combp/resu_combp.csv')#
-colnames(probe)[c(12,13)] = c('chr', 'pos')#
-quartz(width = 5.5, height = 2.5)#
-manAs = manhattan_noChr(probe, region, title = 'As')#
-quartz.save('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals/manhattan_plots/manhattan_DMP_As_adj_noFish_020121.png', type = "png", dpi = 300)
-head(probe)
-head(region)
-probe$chr = as.numeric(gsub("chr", "", probe$chr))#
-#
-# dataframes with common columns#
-probe = data.frame(name = probe$cpg, p = probe$P.Value, fdr = probe$adj.P.Val, bonf = probe$adj.P.Val.bonf, chr = probe$chr, pos = probe$pos, type = 'position', dmp_sig = NA, color = NA)#
-region_df = data.frame(name = as.character(seq(1:nrow(region))), p = NA, fdr = NA, bonf = NA, chr = region$chr, pos = region$start, type = 'region', dmp_sig = NA, color = NA, size = NA)#
-#
-# indicating probes within regions#
-for (i in 1:length(region$chr)){#
-	probe$dmp_sig[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = 1#
-}
-probe$color[probe$dmp_sig == 1] = 50#
-probe$color[probe$fdr < 0.05] = 100#
-probe$color[is.na(probe$color)] = probe$chr[is.na(probe$color)]#
-#
-# variable for point size#
-probe$size[probe$color == 50 | probe$color == 100] = 1#
-probe$size[is.na(probe$size)] = 0.5#
-#
-# combine dataframes#
-df_comb = rbind(probe, region_df)
-head(df_comb)
-don = df_comb %>% #
-  		# Compute chromosome size#
-			group_by(chr) %>% summarise(chr_len=as.numeric(max(pos)))
-don = df_comb %>% #
-  		# Compute chromosome size#
-			group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>% #
-  		# Calculate cumulative position of each chromosome#
- 			mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len)
-don = df_comb %>% #
-  		# Compute chromosome size#
-			group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>% #
-  		# Calculate cumulative position of each chromosome#
- 			mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len) %>%#
-  		# Add this info to the initial dataset#
-  			left_join(df_comb, ., by=c("chr"="chr"))
-don = df_comb %>% #
-  		# Compute chromosome size#
-			group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>% #
-  		# Calculate cumulative position of each chromosome#
- 			mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len)
-head(don)
-don = df_comb %>% #
-  		# Compute chromosome size#
-			group_by(chr)
-head(DON)
-head(don)
-don = df_comb %>% #
-  		# Compute chromosome size#
-			group_by(chr) %>% summarise(chr_len=as.numeric(max(pos)))
-head(don)
-don = df_comb %>% #
-  		# Compute chromosome size#
-			group_by(chr)
-head(don)
-library(dplyr)
-library(tidyverse)
-don = df_comb %>% #
-  		# Compute chromosome size#
-			group_by(chr)
-head(don)
-don = df_comb %>% #
-  		# Compute chromosome size#
-			group_by(chr) %>% summarise(chr_len=as.numeric(max(pos)))
-head(don)
-library(sas7bdat)#
-library(sva)#
-library(reshape)#
-library(ggplot2)#
-library(gridExtra)#
-library(knitr)#
-library(dplyr)#
-library(kableExtra)#
-library(tidyverse)#
-library(minfi)#
-library(stringr)#
-library(limma)#
-library(IlluminaHumanMethylation450kanno.ilmn12.hg19)#
-library(minfi)#
-library(DMRcate)#
-library(UpSetR)#
-library(reshape)#
-library(corrplot)#
-library(factoextra)#
-library(ENmix)#
-library(missMethyl)#
-#
-# loading annotation#
-anno = getAnnotation(IlluminaHumanMethylation450kanno.ilmn12.hg19)#
-anno = data.frame(anno)#
-#
-# loading functions#
-setwd('/Users/annebozack/Documents/Cardenas/viva_DNAm_metals_local')#
-source('EWAS functions.R')
-load("/Users/annebozack/Box/NIEHS-R01 ONES/Methylation Data/CordBlood_ComBat_Betas_Mvals_filteredProbes_metalAnalysis.RData")
-objects(c)
-objects()
-cpg1 = ComBat.Betas.Metals[rowlnames(ComBat.Betas.Metals) == cg02042823,]
-cpg1 = ComBat.Betas.Metals[rownames(ComBat.Betas.Metals) == cg02042823,]
-cpg1 = ComBat.Betas.Metals[rownames(ComBat.Betas.Metals) == 'cg02042823',]
-table(pDatcordMetal$id == colnames(ComBat.Betas.Metals))
-head(ComBat.Betas.Metals)
-head(pDatcordMetal)
-table(pDatcordMetal$samplename == colnames(ComBat.Betas.Metals))
-identical(pDatcordMetal$samplename, colnames(ComBat.Betas.Metals))
-df1 = data.frame(dnam = cpg1, mn = pDatcordMetal Mn_log2)
-df1 = data.frame(dnam = cpg1, mn = pDatcordMetal$Mn_log2)
-ggplot(df1, aes(x = mn, y = dnam))
-ggplot(df1, aes(x = mn, y = dnam)) + geom_point()
-ggplot(df1, aes(x = mn, y = dnam)) + geom_point() + geom_smooth()
-pDatcordMetal_F = pDatcordMetal[pDatcordMetal$female_d == 1,]
-ComBat.Betas.Metals_F = ComBat.Betas.Metals[,colnames(ComBat.Betas.Metals) %in% pDatcordMetal_F$samplename]
-identical(pDatcordMetal_F$samplename, colnames(ComBat.Betas.Metals_F))#
-table(pDatcordMetal_F$samplename == colnames(ComBat.Betas.Metals_F))
-cpg2 = ComBat.Betas.Metals_F[rownames(ComBat.Betas.Metals_F) == 'cg00954161',]#
-df2 = data.frame(dnam = cpg1, mn = pDatcordMetal_F$Mn_log2)#
-mn_cg00954161 = ggplot(df2, aes(x = mn, y = dnam)) + geom_point()
-df2 = data.frame(dnam = ComBat.Betas.Metals_F[rownames(ComBat.Betas.Metals_F) == 'cg00954161',], mn = pDatcordMetal_F$Mn_log2)#
-mn_cg00954161 = ggplot(df2, aes(x = mn, y = dnam)) + geom_point()
-mn_cg00954161
-mn_cg00954161 = ggplot(df2, aes(x = mn, y = dnam)) + geom_point() + geom_smooth()
-mn_cg00954161
-df3 = data.frame(dnam = ComBat.Betas.Metals_F[rownames(ComBat.Betas.Metals_F) == 'cg11161853',], mn = pDatcordMetal_F$Mn_log2)#
-mn_cg11161853 = ggplot(df3, aes(x = mn, y = dnam)) + geom_point() + geom_smooth()
-mn_cg11161853
-cpgAll = cbind(cpg1, cpg2, cpg3, cpg4, cpg5, cpg6, cpg7, cpg8, cpg9, cpg10, cpg11, cpg12, cpg13)
-cpg1 = data.frame(dnam = ComBat.Betas.Metals[rownames(ComBat.Betas.Metals) == 'cg02042823',], conc = pDatcordMetal$Mn_log2, exp = 'Mn', group = 'all', cpg = 'cg02042823')
-pDatcordMetal_M = pDatcordMetal[pDatcordMetal$female_d == 0,]#
-ComBat.Betas.Metals_M = ComBat.Betas.Metals[,colnames(ComBat.Betas.Metals) %in% pDatcordMetal_M$samplename]#
-identical(pDatcordMetal_M$samplename, colnames(ComBat.Betas.Metals_M))#
-table(pDatcordMetal_M$samplename == colnames(ComBat.Betas.Metals_M))
-cpg1 = data.frame(dnam = ComBat.Betas.Metals[rownames(ComBat.Betas.Metals) == 'cg02042823',], conc = pDatcordMetal$Mn_log2, exp = 'Mn', group = 'all', cpg = 'cg02042823')
-cpg2 = data.frame(dnam = ComBat.Betas.Metals_F[rownames(ComBat.Betas.Metals_F) == 'cg00954161',], conc = pDatcordMetal_F$Mn_log2, exp = 'Mn', group = 'female', cpg = 'cg00954161')#
-cpg3 = data.frame(dnam = ComBat.Betas.Metals_F[rownames(ComBat.Betas.Metals_F) == 'cg11161853',], conc = pDatcordMetal_F$Mn_log2, exp = 'Mn', group = 'female', cpg = 'cg11161853')#
-cpg4 = data.frame(dnam = ComBat.Betas.Metals_F[rownames(ComBat.Betas.Metals_F) == 'cg23903787',], conc = pDatcordMetal_F$Mn_log2, exp = 'Mn', group = 'female', cpg = 'cg23903787')#
-cpg5 = data.frame(dnam = ComBat.Betas.Metals_F[rownames(ComBat.Betas.Metals_F) == 'cg19908812',], conc = pDatcordMetal_F$Mn_log2, exp = 'Mn', group = 'female', cpg = 'cg19908812')#
-cpg6 = data.frame(dnam = ComBat.Betas.Metals_F[rownames(ComBat.Betas.Metals_F) == 'cg26462130',], conc = pDatcordMetal_F$Mn_log2, exp = 'Mn', group = 'female', cpg = 'cg26462130')#
-cpg7 = data.frame(dnam = ComBat.Betas.Metals_F[rownames(ComBat.Betas.Metals_F) == 'cg08904630',], conc = pDatcordMetal_F$Mn_log2, exp = 'Mn', group = 'female', cpg = 'cg08904630')#
-cpg8 = data.frame(dnam = ComBat.Betas.Metals_F[rownames(ComBat.Betas.Metals_F) == 'cg22799518',], conc = pDatcordMetal_F$Mn_log2, exp = 'Mn', group = 'female', cpg = 'cg22799518')#
-cpg9 = data.frame(dnam = ComBat.Betas.Metals_F[rownames(ComBat.Betas.Metals_F) == 'cg01744822',], conc = pDatcordMetal_F$Mn_log2, exp = 'Mn', group = 'female', cpg = 'cg01744822')#
-cpg10 = data.frame(dnam = ComBat.Betas.Metals_F[rownames(ComBat.Betas.Metals_F) == 'cg15712310',], conc = pDatcordMetal_F$Mn_log2, exp = 'Mn', group = 'female', cpg = 'cg15712310')
-cpg11 = data.frame(dnam = ComBat.Betas.Metals_M[rownames(ComBat.Betas.Metals_M) == 'cg03763518',], conc = pDatcordMetal_M$Mn_log2, exp = 'Mn', group = 'male', cpg = 'cg03763518')#
-cpg12 = data.frame(dnam = ComBat.Betas.Metals_M[rownames(ComBat.Betas.Metals_M) == 'cg02042823',], conc = pDatcordMetal_M$Mn_log2, exp = 'Mn', group = 'male', cpg = 'cg02042823')
-cpg13 = data.frame(dnam = ComBat.Betas.Metals[rownames(ComBat.Betas.Metals) == 'cg20608990',], conc = pDatcordMetal$Mn_log2, exp = 'Pb', group = 'all', cpg = 'cg20608990')
-cpg13 = data.frame(dnam = ComBat.Betas.Metals[rownames(ComBat.Betas.Metals) == 'cg20608990',], conc = pDatcordMetal$Pb_log2, exp = 'Pb', group = 'all', cpg = 'cg20608990')
-cpgAll = cbind(cpg1, cpg2, cpg3, cpg4, cpg5, cpg6, cpg7, cpg8, cpg9, cpg10, cpg11, cpg12, cpg13)
-cpgAll = rbind(cpg1, cpg2, cpg3, cpg4, cpg5, cpg6, cpg7, cpg8, cpg9, cpg10, cpg11, cpg12, cpg13)
-cpgAll$cpgGrp = paste0(cpgAllexp$, '_', cpgAll$group)
-cpgAll$cpgGrp = paste0(cpgAll$exp, '_', cpgAll$group)
-cpgAll$cpgGrp = paste0(cpgAll$exp, '_', cpgAll$cpg, '_', cpgAll$group)
-ggplot(cpgAll, aes(x = conc, y = dnam)) + geom_point() + geom_smooth() + facet_wrap(vars(cpgGrp)) + theme_minimal()
-ggplot(cpgAll, aes(x = conc, y = dnam)) + geom_point() + geom_smooth() + facet_wrap(vars(cpgGrp)) + theme_minimal(scales = 'free')
-ggplot(cpgAll, aes(x = conc, y = dnam)) + geom_point() + geom_smooth() + facet_wrap(vars(cpgGrp), scales = 'free') + theme_minimal()
-cpgAll$cpgGrp = paste0(cpgAll$exp, '_', cpgAll$group, '_', cpgAll$cpg)
-ggplot(cpgAll, aes(x = conc, y = dnam)) + geom_point() + geom_smooth() + facet_wrap(vars(cpgGrp), scales = 'free') + theme_minimal()
-pDatcordMetal[pDatcordMetal$Mn_log2<0,]
-table(pDatacordMetal$Mn_comment)
-table(pDatcordMetal $Mn_comment)
-library(sas7bdat)#
-library(sva)#
-library(reshape)#
-library(ggplot2)#
-library(gridExtra)#
-library(knitr)#
-library(dplyr)#
-library(kableExtra)#
-library(tidyverse)#
-library(minfi)#
-library(stringr)#
-library(limma)#
-library(IlluminaHumanMethylation450kanno.ilmn12.hg19)#
-library(minfi)#
-library(DMRcate)#
-library(UpSetR)#
-library(reshape)#
-library(corrplot)#
-library(factoextra)#
-library(ENmix)#
-library(missMethyl)#
-library(corrplot)#
-#
-# loading annotation#
-anno = getAnnotation(IlluminaHumanMethylation450kanno.ilmn12.hg19)#
-anno = data.frame(anno)#
-#
-# loading functions#
-setwd('/Users/annebozack/Documents/Cardenas/viva_DNAm_TL_local')
-install.packages("devtools")
-install.packages("roxygen2")
-setwd('/Users/annebozack/Documents')
-devtools::create("EWASplot")
-? ppoints
-devtools::document()
-getwd()
+EWASplot::qqplot(DMP_unadj$P.Value)
+detach('EWASplot')
+detach(EWASplot)
+detach('package:EWASplot', unlaod = T)
+detach('package:EWASplot')
+devtools::install_github("annebozack/EWASplot")
+library(EWASplot)
+detach('package:EWASplot')
+devtools::install_github("annebozack/EWASplot")
+library(EWASplot)
+detach('package:EWASplot')
 setwd('/Users/annebozack/Documents/EWASplot')
 devtools::document()
 devtools::document()
-rm(list = c("lambda"))
-rm(list = c("gg_qqplot"))
-devtools::document()
+devtools::install_github("annebozack/EWASplot")
+library(EWASplot)
+EWASplot::qq_plot(DMP_unadj$P.Value)
+EWASplot::qq_plot(DMP_unadj$P.Value)
+qq_plot
+detach('package:EWASplot')
+devtools::install_github("annebozack/EWASplot")
+library(EWASplot)
+EWASplot::qq_plot(DMP_unadj$P.Value)
+detach('package:EWASplot')
+devtools::install_github("annebozack/EWASplot")
+library(EWASplot)
+EWASplot::qq_plot(DMP_unadj$P.Value)
+range(c(1:10))
+range(c(1:10))[2]
+range(c(1:10))[2]*0.9
+qq_plot
+detach('package:EWASplot')
+devtools::install_github("annebozack/EWASplot")
+devtools::install_github("annebozack/EWASplot", force = T)
+library(EWAsplot)
+library(EWASplot)
+qq_plot
+detach('package:EWASplot')
+qq_plot
+library(EWASplot)
+detach('package:EWASplot')
+remove.packages('EWASplot')
+library(EWASplot)
+devtools::install_github("annebozack/EWASplot")
+library(EWASplot)
+qq_plot(DMP_unadj$P.Value)
+QQ_plot
+qq_plot
+detach('package:EWASplot')
+remove.packages('EWASplot')
+topTable
+class(DMP_unadj)
+IlluminaHumanMethylation450kanno.ilmn12.hg19:data(Locations)
+library(IlluminaHumanMethylation450kanno.ilmn12.hg19)
+loc = IlluminaHumanMethylation450kanno.ilmn12.hg19:data(Locations)
+head(loc)
+IlluminaHumanMethylation450kanno.ilmn12.hg19::data(Locations)
+IlluminaHumanMethylation450kanno.ilmn12.hg19:data(Locations)
+data(Locations)
+IlluminaHumanMethylation450kanno.ilmn12.hg19:data(Locations)
+IlluminaHumanMethylation450kanno.ilmn12.hg19:data()
 objects()
+head(Locatinos)
+head(Locations)
+dim(Locatiios)
+dim(Locations)
+dim(anno)
+data()
+data(Locations, package = 'IlluminaHumanMethylation450kanno.ilmn12.hg19')
+dim(Locations)
+is.numeric(Locations$chr)
+region = NULL
+is.null(regino)
+is.null(region)
+FDR
+FDR = FALSE
+FDR
+FDR = T
+FDR
+is.true(FDR)
+is.odd(2)
+10 %% 2
+11 %% 2
+objects()
+probe = DMP_unadj
+region = NULL
+array = '450K'
+FDR = FALSE
+title = NULL
+col.chr = c('gray40', 'gray55')
+col.sig = 'gray18'
+col.dmr = 'black'
+cex = 0.5
+cex.sig = 0.75)
+cex.sig = 0.75
+'data.frame' %in% class(probe)
+'P.Value' %in% colnames(probe)
+'cpg' %in% colnames(probe)
+'chr' %in% colnames(probe)
+!is.numeric(probe$chr)
+if (!is.numeric(probe$chr)){#
+		probe$chr = as.numeric(gsub("chr", "", probe$chr))#
+	}
+probe$bonf = p.adjust(probe$P.Value, method = 'bonferroni')#
+	if (FDR){#
+		probe$FDR = p.adjust(probe$P.Value, method = 'fdr')#
+	}
+probe$color[probe$bonf < 0.05] = col.sig  # DMP probes#
+	probe$size[probe$bonf < 0.05] = cex.sig#
+	if (FDR){#
+		probe$color[probe$FDR < 0.05] = col.sig#
+		probe$size[probe$FDR < 0.05] = cex.sig#
+	}#
+	if (region){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+		}#
+	}#
+	probe$size[is.na(probe$color)] = cex#
+	probe$color[is.na(probe$color)] = col.chr[(probe$chr %% 2) + 1] # all other probes
+if (region)
+region
+is.null(region)
+if (!is.null(region)){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+		}#
+	}
+head(probe)
+don = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos)))
+don = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len)
+don = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len) %>%  # Calculate cumulative position of each chromosome#
+	  	left_join(probe, ., by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, pos) %>% mutate(poscum=pos+tot)
+head(don)
+axisdf = don %>% group_by(chr) %>% summarize(center=(max(poscum) + min(poscum))/2)
+probe = DMP_unadj
+if (!is.numeric(probe$chr)){#
+		probe$chr = as.numeric(gsub("chr", "", probe$chr))#
+	}#
+	# Bonferroni and FDR adjustment of p-values#
+	probe$bonf = p.adjust(probe$P.Value, method = 'bonferroni')#
+	if (FDR){#
+		probe$FDR = p.adjust(probe$P.Value, method = 'fdr')#
+	}#
+	# variables for point color, size, and alpha#
+	probe$color[probe$bonf < 0.05] = col.sig  # DMP probes#
+	probe$size[probe$bonf < 0.05] = cex.sig#
+	probe$alpha[probe$bonf < 0.05] = alpha.sig#
+	if (FDR){#
+		probe$color[probe$FDR < 0.05] = col.sig#
+		probe$size[probe$FDR < 0.05] = cex.sig#
+		probe$alpha[probe$FDR < 0.05] = alpha.sig#
+	}#
+	if (!is.null(region)){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+			probe$alpha[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = alpha.sig#
+		}#
+	}#
+	probe$size[is.na(probe$color)] = cex#
+	probe$size[is.na(probe$color)] = alpha#
+	probe$color[is.na(probe$color)] = col.chr[(probe$chr %% 2) + 1] # all other probes
+alpha = 0.5
+alpha.sig = 1
+probe = DMP_unadj
+if (!is.numeric(probe$chr)){#
+		probe$chr = as.numeric(gsub("chr", "", probe$chr))#
+	}#
+	# Bonferroni and FDR adjustment of p-values#
+	probe$bonf = p.adjust(probe$P.Value, method = 'bonferroni')#
+	if (FDR){#
+		probe$FDR = p.adjust(probe$P.Value, method = 'fdr')#
+	}#
+	# variables for point color, size, and alpha#
+	probe$color[probe$bonf < 0.05] = col.sig  # DMP probes#
+	probe$size[probe$bonf < 0.05] = cex.sig#
+	probe$alpha[probe$bonf < 0.05] = alpha.sig#
+	if (FDR){#
+		probe$color[probe$FDR < 0.05] = col.sig#
+		probe$size[probe$FDR < 0.05] = cex.sig#
+		probe$alpha[probe$FDR < 0.05] = alpha.sig#
+	}#
+	if (!is.null(region)){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+			probe$alpha[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = alpha.sig#
+		}#
+	}#
+	probe$size[is.na(probe$color)] = cex#
+	probe$size[is.na(probe$color)] = alpha#
+	probe$color[is.na(probe$color)] = col.chr[(probe$chr %% 2) + 1] # all other probes
+1%% 2
+table(probe$chr)
+col.chr
+2%% 2
+22%% 2
+table(is.na(probe$color))
+probe = DMP_unadj
+if (!is.numeric(probe$chr)){#
+		probe$chr = as.numeric(gsub("chr", "", probe$chr))#
+	}#
+	# Bonferroni and FDR adjustment of p-values#
+	probe$bonf = p.adjust(probe$P.Value, method = 'bonferroni')#
+	if (FDR){#
+		probe$FDR = p.adjust(probe$P.Value, method = 'fdr')#
+	}#
+	# variables for point color, size, and alpha#
+	probe$color[probe$bonf < 0.05] = col.sig  # DMP probes#
+	probe$size[probe$bonf < 0.05] = cex.sig#
+	probe$alpha[probe$bonf < 0.05] = alpha.sig#
+	if (FDR){#
+		probe$color[probe$FDR < 0.05] = col.sig#
+		probe$size[probe$FDR < 0.05] = cex.sig#
+		probe$alpha[probe$FDR < 0.05] = alpha.sig#
+	}#
+	if (!is.null(region)){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+			probe$alpha[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = alpha.sig#
+		}#
+	}#
+	probe$size[is.na(probe$color)] = cex#
+	probe$size[is.na(probe$color)] = alpha
+table(is.na(probe$color))
+probe$color[is.na(probe$color)] = probe$chr[is.na(probe$color)] %% 2
+table(probe$color)
+class(probe$color)
+probe = DMP_unadj
+if (!is.numeric(probe$chr)){#
+		probe$chr = as.numeric(gsub("chr", "", probe$chr))#
+	}#
+	# Bonferroni and FDR adjustment of p-values#
+	probe$bonf = p.adjust(probe$P.Value, method = 'bonferroni')#
+	if (FDR){#
+		probe$FDR = p.adjust(probe$P.Value, method = 'fdr')#
+	}#
+	# variables for point color, size, and alpha#
+	probe$color[probe$bonf < 0.05] = col.sig  # DMP probes#
+	probe$size[probe$bonf < 0.05] = cex.sig#
+	probe$alpha[probe$bonf < 0.05] = alpha.sig#
+	if (FDR){#
+		probe$color[probe$FDR < 0.05] = col.sig#
+		probe$size[probe$FDR < 0.05] = cex.sig#
+		probe$alpha[probe$FDR < 0.05] = alpha.sig#
+	}#
+	if (!is.null(region)){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+			probe$alpha[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = alpha.sig#
+		}#
+	}#
+	probe$size[is.na(probe$color)] = cex#
+	probe$size[is.na(probe$color)] = alpha#
+	probe$color[is.na(probe$color)] = col.chr[(probe$chr[is.na(probe$color)] %% 2) + 1]
+table(probe$color)
+don = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len) %>%  # Calculate cumulative position of each chromosome#
+	  	left_join(probe, ., by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, pos) %>% mutate(poscum=pos+tot)  # Add a cumulative position of each site#
+	 # Prepare X axis#
+		axisdf = don %>% group_by(chr) %>% summarize(center=(max(poscum) + min(poscum))/2)
+head(don)
+table(don$alpha)
+probe = DMP_unadj
+if (!is.numeric(probe$chr)){#
+		probe$chr = as.numeric(gsub("chr", "", probe$chr))#
+	}#
+	# Bonferroni and FDR adjustment of p-values#
+	probe$bonf = p.adjust(probe$P.Value, method = 'bonferroni')#
+	if (FDR){#
+		probe$FDR = p.adjust(probe$P.Value, method = 'fdr')#
+	}#
+	# variables for point color, size, and alpha#
+	probe$color[probe$bonf < 0.05] = col.sig  # DMP probes#
+	probe$size[probe$bonf < 0.05] = cex.sig#
+	probe$alpha[probe$bonf < 0.05] = alpha.sig#
+	if (FDR){#
+		probe$color[probe$FDR < 0.05] = col.sig#
+		probe$size[probe$FDR < 0.05] = cex.sig#
+		probe$alpha[probe$FDR < 0.05] = alpha.sig#
+	}#
+	if (!is.null(region)){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+			probe$alpha[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = alpha.sig#
+		}#
+	}#
+	probe$size[is.na(probe$color)] = cex#
+	probe$alpha[is.na(probe$color)] = alpha#
+	probe$color[is.na(probe$color)] = col.chr[(probe$chr[is.na(probe$color)] %% 2) + 1]	#
+	# dataset for plotting#
+	don = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len) %>%  # Calculate cumulative position of each chromosome#
+	  	left_join(probe, ., by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, pos) %>% mutate(poscum=pos+tot)  # Add a cumulative position of each site#
+	 # Prepare X axis#
+		axisdf = don %>% group_by(chr) %>% summarize(center=(max(poscum) + min(poscum))/2)
+head(don)
+manhattan = ggplot(don_position, aes(x = poscum, y = -log10(p))) +#
+	geom_point(aes(color = color, size = size, alpha = alpha))
+manhattan = ggplot(don, aes(x = poscum, y = -log10(p))) +#
+	geom_point(aes(color = color, size = size, alpha = alpha))
+ggplot(don, aes(x = poscum, y = -log10(p))) +#
+	geom_point(aes(color = color, size = size, alpha = alpha))
+ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(aes(color = color, size = size, alpha = alpha))
+ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = color, size = size, alpha = alpha)
+ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha)
+head(axisdf)
+ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$p)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$p)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome')
+ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$p)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$p)) + 0.5), by = 1))
+ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal()
+ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome')
+FDR
+FDR = T
+# Bonferroni and FDR adjustment of p-values#
+	probe$bonf = p.adjust(probe$P.Value, method = 'bonferroni')#
+	if (FDR){#
+		probe$FDR = p.adjust(probe$P.Value, method = 'fdr')#
+	}#
+	# variables for point color, size, and alpha#
+	probe$color[probe$bonf < 0.05] = col.sig  # DMP probes#
+	probe$size[probe$bonf < 0.05] = cex.sig#
+	probe$alpha[probe$bonf < 0.05] = alpha.sig#
+	if (FDR){#
+		probe$color[probe$FDR < 0.05] = col.sig#
+		probe$size[probe$FDR < 0.05] = cex.sig#
+		probe$alpha[probe$FDR < 0.05] = alpha.sig#
+	}#
+	if (!is.null(region)){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+			probe$alpha[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = alpha.sig#
+		}#
+	}#
+	probe$size[is.na(probe$color)] = cex#
+	probe$alpha[is.na(probe$color)] = alpha#
+	probe$color[is.na(probe$color)] = col.chr[(probe$chr[is.na(probe$color)] %% 2) + 1]	#
+	# dataset for plotting#
+	don = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len) %>%  # Calculate cumulative position of each chromosome#
+	  	left_join(probe, ., by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, pos) %>% mutate(poscum=pos+tot)  # Add a cumulative position of each site#
+	 # Prepare X axis#
+		axisdf = don %>% group_by(chr) %>% summarize(center=(max(poscum) + min(poscum))/2)#
+	manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept= region$start, colour = '#4393c3', size=.2) +#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don_position$p[don_position$fdr < 0.05])), colour='#AB3428', size=.5, alpha = 1, linetype = "dashed")#
+    } #
+    if (!is.null(annotate)){#
+		manhattan = manhattan + annotate("text", x = max(don_position$poscum)*0.05, y = max(-log10(don_position$p)), label = annotate, size = 4)#
+	}#
+	return(manhattan)
+# variables for point color, size, and alpha#
+	probe$color[probe$bonf < 0.05] = col.sig  # DMP probes#
+	probe$size[probe$bonf < 0.05] = cex.sig#
+	probe$alpha[probe$bonf < 0.05] = alpha.sig#
+	if (FDR){#
+		probe$color[probe$FDR < 0.05] = col.sig#
+		probe$size[probe$FDR < 0.05] = cex.sig#
+		probe$alpha[probe$FDR < 0.05] = alpha.sig#
+	}#
+	if (!is.null(region)){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+			probe$alpha[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = alpha.sig#
+		}#
+	}#
+	probe$size[is.na(probe$color)] = cex#
+	probe$alpha[is.na(probe$color)] = alpha#
+	probe$color[is.na(probe$color)] = col.chr[(probe$chr[is.na(probe$color)] %% 2) + 1]
+don = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len) %>%  # Calculate cumulative position of each chromosome#
+	  	left_join(probe, ., by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, pos) %>% mutate(poscum=pos+tot)  # Add a cumulative position of each site#
+	 # Prepare X axis#
+		axisdf = don %>% group_by(chr) %>% summarize(center=(max(poscum) + min(poscum))/2)
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept= region$start, colour = '#4393c3', size=.2) +#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don_position$p[don_position$fdr < 0.05])), colour='#AB3428', size=.5, alpha = 1, linetype = "dashed")#
+    } #
+    if (!is.null(annotate)){#
+		manhattan = manhattan + annotate("text", x = max(don_position$poscum)*0.05, y = max(-log10(don_position$p)), label = annotate, size = 4)#
+	}
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept= region$start, colour = '#4393c3', size=.2)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don_position$p[don_position$fdr < 0.05])), colour='#AB3428', size=.5, alpha = 1, linetype = "dashed")#
+    } #
+    if (!is.null(annotate)){#
+		manhattan = manhattan + annotate("text", x = max(don_position$poscum)*0.05, y = max(-log10(don_position$p)), label = annotate, size = 4)#
+	}
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept= region$start, colour = '#4393c3', size=.2)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don_position$p[don$fdr < 0.05])), colour='#AB3428', size=.5, alpha = 1, linetype = "dashed")#
+    } #
+    if (!is.null(annotate)){#
+		manhattan = manhattan + annotate("text", x = max(don$poscum)*0.05, y = max(-log10(don$p)), label = annotate, size = 4)#
+	}
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept= region$start, colour = '#4393c3', size=.2)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$p[don$fdr < 0.05])), colour='#AB3428', size=.5, alpha = 1, linetype = "dashed")#
+    } #
+    if (!is.null(annotate)){#
+		manhattan = manhattan + annotate("text", x = max(don$poscum)*0.05, y = max(-log10(don$p)), label = annotate, size = 4)#
+	}
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept= region$start, colour = '#4393c3', size=.2)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=.5, alpha = 1, linetype = "dashed")#
+    } #
+    if (!is.null(annotate)){#
+		manhattan = manhattan + annotate("text", x = max(don$poscum)*0.05, y = max(-log10(don$P.Value)), label = annotate, size = 4)#
+	}
+manhattan
+ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome')
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome')
+if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept= region$start, colour = '#4393c3', size=.2)#
+    }
+library(DMRcate)
+extractRanges
+head(probe)
+range(probe$pos[probe$chr == 1])
+range(probe$pos[probe$chr == 5])
+range(probe$pos[probe$chr == 6])
+range(probe$pos[probe$chr == 9])
+range(probe$pos[probe$chr == 15])
+range(probe$pos[probe$chr == 18])
+range(probe$pos[probe$chr == 19])
+region = data.frame(chr = c(1,5,6,6,9,15,18,19), start = c(112000000, 50699332, 51036378, 151036378, 91105974, 8506237, 707841, 55508), end = c(112000010, 50699300, 51036600, 151036500, 91105990, 8506600, 707900, 55568))
+head(don)
+head(prob)
+head(probe)
+don = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos)))
+head(don)
+don
+don = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len)
+head(don)
+don
+don = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len) %>%  # Calculate cumulative position of each chromosome#
+	  	left_join(probe, ., by=c("chr"="chr"))
+head(don)
+? left_join
+chrdat = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len)
+chrdat
+don = left_join(probe, don, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, pos) %>% mutate(poscum=pos+tot)
+don = left_join(probe, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, pos) %>% mutate(poscum=pos+tot)
+head(don)
+dim(don)
+don_reg = left_join(region, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, start) %>% mutate(poscum=start+tot)
+don_reg
+!is.null(region)
+region = data.frame(chr = c(1,5,6,6,9,15,18,19), start = c(112000000, 50699332, 51036378, 151036378, 91105974, 8506237, 707841, 55508), end = c(112000010, 50699900, 51036600, 151036500, 91105990, 8506600, 707900, 55568))
+# chr as numeric#
+	if (!is.numeric(probe$chr)){#
+		probe$chr = as.numeric(gsub("chr", "", probe$chr))#
+	}#
+	# Bonferroni and FDR adjustment of p-values#
+	probe$bonf = p.adjust(probe$P.Value, method = 'bonferroni')#
+	if (FDR){#
+		probe$FDR = p.adjust(probe$P.Value, method = 'fdr')#
+	}#
+	# variables for point color, size, and alpha#
+	probe$color[probe$bonf < 0.05] = col.sig  # DMP probes#
+	probe$size[probe$bonf < 0.05] = cex.sig#
+	probe$alpha[probe$bonf < 0.05] = alpha.sig#
+	if (FDR){#
+		probe$color[probe$FDR < 0.05] = col.sig#
+		probe$size[probe$FDR < 0.05] = cex.sig#
+		probe$alpha[probe$FDR < 0.05] = alpha.sig#
+	}#
+	if (!is.null(region)){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+			probe$alpha[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = alpha.sig#
+		}#
+	}#
+	probe$size[is.na(probe$color)] = cex#
+	probe$alpha[is.na(probe$color)] = alpha#
+	probe$color[is.na(probe$color)] = col.chr[(probe$chr[is.na(probe$color)] %% 2) + 1]	#
+	# combine probe and region datasets#
+	region = region[,c('chr', 'start')]#
+	probe = cbind(probe[,c('cpg', 'P.Value', )], data.frame())#
+	chrdat = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len)#
+	don = left_join(probe, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, pos) %>% mutate(poscum=pos+tot) #
+	don_reg = left_join(region, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, start) %>% mutate(poscum=start+tot) #
+	axisdf = don %>% group_by(chr) %>% summarize(center=(max(poscum) + min(poscum))/2)#
+	manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept= region$poscum, colour = '#4393c3', size=.2)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=.5, alpha = 1, linetype = "dashed")#
+    } #
+    if (!is.null(annotate)){#
+		manhattan = manhattan + annotate("text", x = max(don$poscum)*0.05, y = max(-log10(don$P.Value)), label = annotate, size = 4)#
+	}
+# chr as numeric#
+	if (!is.numeric(probe$chr)){#
+		probe$chr = as.numeric(gsub("chr", "", probe$chr))#
+	}#
+	# Bonferroni and FDR adjustment of p-values#
+	probe$bonf = p.adjust(probe$P.Value, method = 'bonferroni')#
+	if (FDR){#
+		probe$FDR = p.adjust(probe$P.Value, method = 'fdr')#
+	}#
+	# variables for point color, size, and alpha#
+	probe$color[probe$bonf < 0.05] = col.sig  # DMP probes#
+	probe$size[probe$bonf < 0.05] = cex.sig#
+	probe$alpha[probe$bonf < 0.05] = alpha.sig#
+	if (FDR){#
+		probe$color[probe$FDR < 0.05] = col.sig#
+		probe$size[probe$FDR < 0.05] = cex.sig#
+		probe$alpha[probe$FDR < 0.05] = alpha.sig#
+	}#
+	if (!is.null(region)){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+			probe$alpha[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = alpha.sig#
+		}#
+	}#
+	probe$size[is.na(probe$color)] = cex#
+	probe$alpha[is.na(probe$color)] = alpha#
+	probe$color[is.na(probe$color)] = col.chr[(probe$chr[is.na(probe$color)] %% 2) + 1]	#
+	chrdat = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len)#
+	don = left_join(probe, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, pos) %>% mutate(poscum=pos+tot) #
+	don_reg = left_join(region, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, start) %>% mutate(poscum=start+tot) #
+	axisdf = don %>% group_by(chr) %>% summarize(center=(max(poscum) + min(poscum))/2)#
+	manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept= region$poscum, colour = '#4393c3', size=.2)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=.5, alpha = 1, linetype = "dashed")#
+    } #
+    if (!is.null(annotate)){#
+		manhattan = manhattan + annotate("text", x = max(don$poscum)*0.05, y = max(-log10(don$P.Value)), label = annotate, size = 4)#
+	}
+objects()
+probe = DMP_unadj
+# chr as numeric#
+	if (!is.numeric(probe$chr)){#
+		probe$chr = as.numeric(gsub("chr", "", probe$chr))#
+	}#
+	# Bonferroni and FDR adjustment of p-values#
+	probe$bonf = p.adjust(probe$P.Value, method = 'bonferroni')#
+	if (FDR){#
+		probe$FDR = p.adjust(probe$P.Value, method = 'fdr')#
+	}#
+	# variables for point color, size, and alpha#
+	probe$color[probe$bonf < 0.05] = col.sig  # DMP probes#
+	probe$size[probe$bonf < 0.05] = cex.sig#
+	probe$alpha[probe$bonf < 0.05] = alpha.sig#
+	if (FDR){#
+		probe$color[probe$FDR < 0.05] = col.sig#
+		probe$size[probe$FDR < 0.05] = cex.sig#
+		probe$alpha[probe$FDR < 0.05] = alpha.sig#
+	}#
+	if (!is.null(region)){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+			probe$alpha[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = alpha.sig#
+		}#
+	}#
+	probe$size[is.na(probe$color)] = cex#
+	probe$alpha[is.na(probe$color)] = alpha#
+	probe$color[is.na(probe$color)] = col.chr[(probe$chr[is.na(probe$color)] %% 2) + 1]	#
+	chrdat = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len)#
+	don = left_join(probe, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, pos) %>% mutate(poscum=pos+tot) #
+	don_reg = left_join(region, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, start) %>% mutate(poscum=start+tot) #
+	axisdf = don %>% group_by(chr) %>% summarize(center=(max(poscum) + min(poscum))/2)#
+	manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept= region$poscum, colour = '#4393c3', size=.2)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=.5, alpha = 1, linetype = "dashed")#
+    } #
+    if (!is.null(annotate)){#
+		manhattan = manhattan + annotate("text", x = max(don$poscum)*0.05, y = max(-log10(don$P.Value)), label = annotate, size = 4)#
+	}
+manhattan
+ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome')
+!is.null(region)
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+    # p-value cutoffs#
+	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=.5, alpha = 1) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome')
+manhattan
+region$poscum
+manhattan = manhattan + geom_vline(xintercept = don_reg$poscum, colour = '#4393c3', size=.2)
+manhattan
+line.dmr = '#4393c3'
+size.bonf = 0.5
+size.FDR = 0.5
+head(don)
+min(don$adj.P.Val.bonf)
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept = don_reg$poscum, colour = line.dmr, size=size.line.dmr)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    # p-value cutoffs#
+    if (min(don$adj.P.Val.bonf < 0.05)){#
+    	manhattan = manhattan + 	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=size.bonf)#
+    }	#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=size.FDR, linetype = "dashed")#
+    } #
+    if (!is.null(annotate)){#
+		manhattan = manhattan + annotate("text", x = max(don$poscum)*0.05, y = max(-log10(don$P.Value)), label = annotate, size = 4)#
+	}
+size.line.dmr = 0.2
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept = don_reg$poscum, colour = line.dmr, size=size.line.dmr)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    # p-value cutoffs#
+    if (min(don$adj.P.Val.bonf < 0.05)){#
+    	manhattan = manhattan + 	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=size.bonf)#
+    }	#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=size.FDR, linetype = "dashed")#
+    } #
+    if (!is.null(annotate)){#
+		manhattan = manhattan + annotate("text", x = max(don$poscum)*0.05, y = max(-log10(don$P.Value)), label = annotate, size = 4)#
+	}
+manhattan
+ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome')
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome')
+manhattan
+if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept = don_reg$poscum, colour = line.dmr, size=size.line.dmr)#
+    }
+manhattan
+# p-value cutoffs#
+    if (min(don$adj.P.Val.bonf) < 0.05){#
+    	manhattan = manhattan + 	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=size.bonf)#
+    }
+manhattan
+if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=size.FDR, linetype = "dashed")#
+    }
+axisdf = don %>% group_by(chr) %>% summarize(center=(max(poscum) + min(poscum))/2)
+axisdf
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept = don_reg$poscum, colour = line.dmr, size=size.line.dmr) + geom_point(color = col.dmr, size = cex.sig, alpha = alpha.sig)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    # p-value cutoffs#
+    if (min(don$adj.P.Val.bonf) < 0.05){#
+    	manhattan = manhattan + 	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=size.sig)#
+    }	#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=size.sig, linetype = "dashed")#
+    }
+size.line.sig = 0.5
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept = don_reg$poscum, colour = line.dmr, size=size.line.dmr) + geom_point(color = col.dmr, size = cex.sig, alpha = alpha.sig)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    # p-value cutoffs#
+    if (min(don$adj.P.Val.bonf) < 0.05){#
+    	manhattan = manhattan + 	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=size.sig)#
+    }	#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=size.sig, linetype = "dashed")#
+    }
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept = don_reg$poscum, colour = line.dmr, size=size.line.dmr) + geom_point(color = col.dmr, size = cex.sig, alpha = alpha.sig)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    # p-value cutoffs#
+    if (min(don$adj.P.Val.bonf) < 0.05){#
+    	manhattan = manhattan + 	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=size.line.sig)#
+    }	#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=size.line.sig, linetype = "dashed")#
+    }
+manhattan
+col.dmr = 'black'
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept = don_reg$poscum, colour = line.dmr, size=size.line.dmr)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    # p-value cutoffs#
+    if (min(don$adj.P.Val.bonf) < 0.05){#
+    	manhattan = manhattan + 	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=size.line.sig)#
+    }	#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=size.line.sig, linetype = "dashed")#
+    }
+manhattan
+col.sig = 'pink'
+manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept = don_reg$poscum, colour = line.dmr, size=size.line.dmr)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    # p-value cutoffs#
+    if (min(don$adj.P.Val.bonf) < 0.05){#
+    	manhattan = manhattan + 	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=size.line.sig)#
+    }	#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=size.line.sig, linetype = "dashed")#
+    }
+manhattan
+if (!is.numeric(probe$chr)){#
+		probe$chr = as.numeric(gsub("chr", "", probe$chr))#
+	}#
+	# Bonferroni and FDR adjustment of p-values#
+	probe$bonf = p.adjust(probe$P.Value, method = 'bonferroni')#
+	if (FDR){#
+		probe$FDR = p.adjust(probe$P.Value, method = 'fdr')#
+	}#
+	# variables for point color, size, and alpha#
+	probe$color[probe$bonf < 0.05] = col.sig  # DMP probes#
+	probe$size[probe$bonf < 0.05] = cex.sig#
+	probe$alpha[probe$bonf < 0.05] = alpha.sig#
+	if (FDR){#
+		probe$color[probe$FDR < 0.05] = col.sig#
+		probe$size[probe$FDR < 0.05] = cex.sig#
+		probe$alpha[probe$FDR < 0.05] = alpha.sig#
+	}#
+	if (!is.null(region)){  # probes within regions#
+		for (i in 1:nrow(region)){#
+			probe$color[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = col.dmr#
+			probe$size[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = cex.sig#
+			probe$alpha[(probe$chr == region$chr[i]) & (probe$pos >= region$start[i]) & (probe$pos <= region$end[i])] = alpha.sig#
+		}#
+	}#
+	probe$size[is.na(probe$color)] = cex#
+	probe$alpha[is.na(probe$color)] = alpha#
+	probe$color[is.na(probe$color)] = col.chr[(probe$chr[is.na(probe$color)] %% 2) + 1]	#
+	chrdat = probe %>% #
+		group_by(chr) %>% summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len)#
+	don = left_join(probe, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, pos) %>% mutate(poscum=pos+tot) #
+	don_reg = left_join(region, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		arrange(chr, start) %>% mutate(poscum=start+tot) #
+	axisdf = don %>% group_by(chr) %>% summarize(center=(max(poscum) + min(poscum))/2)#
+	manhattan = ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+	# custom axes:#
+	scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    theme_minimal() + theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + geom_vline(xintercept = don_reg$poscum, colour = line.dmr, size=size.line.dmr)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + labs(title = title)#
+    }#
+    # p-value cutoffs#
+    if (min(don$adj.P.Val.bonf) < 0.05){#
+    	manhattan = manhattan + 	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=size.line.sig)#
+    }	#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=size.line.sig, linetype = "dashed")#
+    }
+manhattan
+?arrange
+chrdat = probe %>% #
+		dplyr::group_by(chr) %>% dplyr::summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size#
+	 	dplyr::mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len)#
+	don = left_join(probe, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		dplyr::arrange(chr, pos) %>% dplyr::mutate(poscum=pos+tot) #
+	don_reg = dplyr::left_join(region, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset#
+		dplyr::arrange(chr, start) %>% dplyr::mutate(poscum=start+tot) #
+	axisdf = don %>% dplyr::group_by(chr) %>% dplyr::summarize(center=(max(poscum) + min(poscum))/2)
+head(don)
+manhattan = ggplot2::ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	ggplot2::geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+	# custom axes:#
+	ggplot2::scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	ggplot2::scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    ggplot2::theme_minimal() + ggplot2::theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    ggplot2::labs(y=expression(-log[10](italic(p))), x='Chromosome')
+manhattan
+manhattan = ggplot2::ggplot(don, aes(x = poscum, y = -log10(P.Value))) +#
+	ggplot2::geom_point(color = don$color, size = don$size, alpha = don$alpha) +#
+	# custom axes:#
+	ggplot2::scale_x_continuous(expand = c(0.005, 0.005), limits = c(min(don$poscum), max(don$poscum)), label = axisdf$chr, breaks= axisdf$center) +#
+	ggplot2::scale_y_continuous(expand = c(0, 0), limits = c(0, (max(-log10(don$P.Value)) + 0.5)), breaks = seq(from = 0, to = (max(-log10(don$P.Value)) + 0.5), by = 1)) +#
+	# Custom theme:#
+    ggplot2::theme_minimal() + ggplot2::theme( #
+	legend.position="none", panel.border = element_blank(), panel.grid.minor.y = element_blank(), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), text = element_text(size = 7.5)) + #
+    ggplot2::labs(y=expression(-log[10](italic(p))), x='Chromosome') #
+    if (!is.null(region)){#
+    	manhattan = manhattan + ggplot2::geom_vline(xintercept = don_reg$poscum, colour = line.dmr, size=size.line.dmr)#
+    }#
+    if (!is.null(title)){#
+    	manhattan = manhattan + ggplot2::labs(title = title)#
+    }#
+    # p-value cutoffs#
+    if (min(don$adj.P.Val.bonf) < 0.05){#
+    	manhattan = manhattan + ggplot2::	geom_hline(yintercept=-log10(0.05/nrow(don)), colour = '#AB3428', size=size.line.sig)#
+    }	#
+    if (FDR == TRUE){#
+    	manhattan = manhattan + ggplot2::geom_hline(yintercept=-log10(max(don$P.Value[don$FDR < 0.05])), colour='#AB3428', size=size.line.sig, linetype = "dashed")#
+    }
+manhattan
