@@ -4,4 +4,11 @@ Common functions for plotting results of epigenome-wide association studies (EWA
 
 To install:
     `devtools::install_github("annebozack/EWASplot")`
-5c1db15d70688cd40ae95f0887bfd1415c8672fd
+
+### Q-Q plot example
+```
+qq_plot(probes$P.Value)
+```
+
+![Q-Q plot]
+(https://raw.githubusercontent.com/annebozack/images/main/man_ex.png)
