@@ -10,5 +10,4 @@ To install:
 qq_plot(probes$P.Value)
 ```
 
-![Q-Q plot]
-(https://raw.githubusercontent.com/annebozack/images/main/man_ex.png)
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
