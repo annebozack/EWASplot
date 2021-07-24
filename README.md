@@ -23,4 +23,4 @@ Manhattan plot of p-values and genomic locations. If results from 450K or EPIC a
 manhattan_plot(probes, regions, FDR = T)
 ```
 
-![manhattan plot](https://raw.githubusercontent.com/annebozack/images/master/man_ex.png)
+![manhattan plot](https://raw.githubusercontent.com/annebozack/images/master/man_ex_sm.png)
