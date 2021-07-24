@@ -3,3 +3,4 @@
 export(lambda)
 export(manhattan_plot)
 export(qq_plot)
+export(volcano)

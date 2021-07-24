@@ -54,7 +54,7 @@ manhattan_plot(
 \item{Size}{of line indicating FDR and Bonferroni significance. Defaults to 0.5.}
 }
 \value{
-Q-Q plot
+Manhattan plot
 }
 \description{
 This function creates a Manhattan plot of EWAS results using ggplot2.

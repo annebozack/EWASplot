@@ -17,7 +17,7 @@
 #' @param alpha Alpha of non-significant probes. Defaults to 0.5.
 #' @param alpha.sig alpha Alpha of non-significant probes. Defaults to 1.
 #' @param Size of line indicating FDR and Bonferroni significance. Defaults to 0.5.
-#' @return Q-Q plot
+#' @return Manhattan plot
 #' @export
 
 manhattan_plot = function(probe, region = NULL, array = c('450K', 'EPIC'), FDR = FALSE, title = NULL, col.chr = c('gray40', 'gray55'), col.sig = 'gray18', col.dmr = 'black', line.dmr = '#4393c3', size.line.dmr = 0.2, cex = 0.5, cex.sig = 0.75, alpha = 0.5, alpha.sig = 1, size.line.sig = 0.5){
