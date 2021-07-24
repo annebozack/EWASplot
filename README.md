@@ -10,4 +10,4 @@ To install:
 qq_plot(probes$P.Value)
 ```
 
-![qq plot](https://raw.githubusercontent.com/annebozack/images/master/qq_ex.png)
+![qq plot](https://raw.githubusercontent.com/annebozack/images/master/qq_ex_sm.png)
