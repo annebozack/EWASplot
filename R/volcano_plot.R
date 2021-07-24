@@ -15,7 +15,7 @@
 #' @param Size of line indicating FDR and Bonferroni significance. Defaults to 0.5.
 #' @return Volcano plot
 #' @export
-volcano = function(pvector, effectvector, FDR = FALSE, title = NULL, col = 'gray40', col.sig = 'gray18', cex = 0.5, cex.sig = 0.75, alpha = 0.5, alpha.sig = 1, size.line.sig = 0.5){
+volcano_plot = function(pvector, effectvector, FDR = FALSE, title = NULL, col = 'gray40', col.sig = 'gray18', cex = 0.5, cex.sig = 0.75, alpha = 0.5, alpha.sig = 1, size.line.sig = 0.5){
 	# dataframe for plotting
 	voldat = data.frame(effect = effectvector, P.Value = pvector, logp = -log10(pvector))
 	
