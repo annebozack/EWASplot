@@ -1,3 +1,24 @@
+#' @export
+processdf1 = function(probe){
+  chrdf = data.frame(chr = unique(probe$chr), chr_len = NA, tot = NA)
+  chrdf = chrdf[order(chrdf$chr),]
+  for (i in 1:nrow(chrdf)){
+  	chrdf$chr_len[i] = as.numeric(max(probe$pos[probe$chr == chrdf$chr[i]]))
+  	chrdf$tot[i] = cumsum(chrdf$chr_len[1:i])[i]-chrdf$chr_len[i]
+  }
+  chrdf = chrdf[,c('chr', 'tot')]
+  return(chrdf)
+}
+
+#' @export
+processdf2 = function(chrdf, probe){
+  plotdf = merge(probe, chrdf, by = 'chr', all.x = T)
+  plotdf = plotdf[order(plotdf$pos),]
+  plotdf = plotdf[order(plotdf$chr),]
+  plotdf$poscum = plotdf$pos + plotdf$tot
+  return(plotdf)
+}
+
 #' Manhattan plot
 #'
 #' This function creates a Manhattan plot of EWAS results using ggplot2.
@@ -19,7 +40,6 @@
 #' @param Size of line indicating FDR and Bonferroni significance. Defaults to 0.5.
 #' @return Manhattan plot
 #' @export
-
 manhattan_plot = function(probe, region = NULL, array = c('450K', 'EPIC'), FDR = FALSE, title = NULL, col.chr = c('gray40', 'gray55'), col.sig = 'gray18', col.dmr = 'black', line.dmr = '#4393c3', size.line.dmr = 0.2, cex = 0.5, cex.sig = 0.75, alpha = 0.5, alpha.sig = 1, size.line.sig = 0.5){
 	if (!('data.frame' %in% class(probe))){
 		stop('probe must be a dataframe')
@@ -77,18 +97,17 @@ manhattan_plot = function(probe, region = NULL, array = c('450K', 'EPIC'), FDR =
 	probe$alpha[is.na(probe$color)] = alpha
 	probe$color[is.na(probe$color)] = col.chr[(probe$chr[is.na(probe$color)] %% 2) + 1]	
 	
-	chrdat = probe %>% 
-		dplyr::group_by(chr) %>% dplyr::summarise(chr_len=as.numeric(max(pos))) %>%  # Compute chromosome size
-	 	dplyr::mutate(tot=cumsum(chr_len)-chr_len) %>% dplyr::select(-chr_len)
+	# create dataframes for plotting probes and regions
+	chrdf = processdf1(probe) 
+	don = processdf2(chrdf, probe)
+	don_reg = processdf2(chrdf, region)
 	
-	don = left_join(probe, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset
-		dplyr::arrange(chr, pos) %>% dplyr::mutate(poscum=pos+tot) 
-		
-	don_reg = dplyr::left_join(region, chrdat, by=c("chr"="chr")) %>%  # Add this info to the initial dataset
-		dplyr::arrange(chr, start) %>% dplyr::mutate(poscum=start+tot) 
-		
-	axisdf = don %>% dplyr::group_by(chr) %>% dplyr::summarize(center=(max(poscum) + min(poscum))/2)
-		
+	axisdf = data.frame(chr = unique(probe$chr), center = NA)
+	axisdf = axisdf[order(axisdf$chr),]
+	for (i in 1:nrow(axisdf)){
+		axisdf$center[i] = mean(c(max(don$poscum[don$chr == axisdf$chr[i]]), min(don$poscum[don$chr == axisdf$chr[i]])))
+	}
+			
 	manhattan = ggplot2::ggplot(don, aes(x = poscum, y = -log10(P.Value))) +
 	ggplot2::geom_point(color = don$color, size = don$size, alpha = don$alpha) +
 	# custom axes:

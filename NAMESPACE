@@ -2,5 +2,7 @@
 
 export(lambda)
 export(manhattan_plot)
+export(processdf1)
+export(processdf2)
 export(qq_plot)
 export(volcano_plot)
