@@ -23,7 +23,7 @@ Volcano plot of effect estimates and p-values. Aesthetics including point size a
 volcano_plot(probes$P.Value, probes$logFC, FDR = T)
 ```
 
-![vol plot](https://raw.githubusercontent.com/annebozack/images/master/vol_ex.png)
+![vol plot](https://raw.githubusercontent.com/annebozack/images/master/vol_ex_sm.png)
 
 ### Manhattan plot 
 
