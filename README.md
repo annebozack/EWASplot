@@ -23,7 +23,7 @@ Volcano plot of effect estimates and p-values. Aesthetics including point size a
 volcano_plot(probes$P.Value, probes$logFC, FDR = T)
 ```
 
-![vol plot](https://raw.githubusercontent.com/annebozack/images/master/vol_ex_sm.png)
+![vol plot](https://raw.githubusercontent.com/annebozack/images/master/vol_ex_sm2.png)
 
 ### Manhattan plot 
 
@@ -33,7 +33,7 @@ Manhattan plot of p-values and genomic locations. If results from 450K or EPIC a
 manhattan_plot(probes, regions, FDR = T)
 ```
 
-![manhattan plot](https://raw.githubusercontent.com/annebozack/images/master/man_ex_sm.png)
+![manhattan plot](https://raw.githubusercontent.com/annebozack/images/master/man_ex_sm2.png)
 
 Plots in examples are from:
 
