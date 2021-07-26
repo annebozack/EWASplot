@@ -39,7 +39,7 @@ volcano_plot = function(pvector, effectvector, FDR = FALSE, title = NULL, col = 
 	voldat$color[is.na(voldat$color)] = col	
 	
 	volcano = ggplot(voldat, aes(x = effect, y = logp)) + 
-	geom_point(size = voldat$size, alpha = voldat$alpha) + 
+	geom_point(size = voldat$size, alpha = voldat$alpha, color = col) + 
 	geom_hline(aes(yintercept = -log10(0.05/nrow(voldat))), color = "#AB3428", size = size.line.sig) + 
 	theme_minimal() + scale_y_continuous(expand = c(0, 0)) + theme(panel.grid.minor.x = element_blank(), panel.grid.major.y = element_line(size = 0.2, color = 'gray65'), panel.grid.major.x = element_line(size = 0.2, color = 'gray65')) + labs(y=expression(-log[10](italic(p))), x='Effect estimate') 
 	if (!is.null(title)){
