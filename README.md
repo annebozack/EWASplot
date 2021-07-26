@@ -11,6 +11,7 @@ library(ggplot2)
 To install EWAS plot:
 ```
 devtools::install_github("annebozack/EWASplot")
+library(EWASplot)
 ```
 
 ### Q-Q plot 
