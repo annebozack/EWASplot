@@ -100,7 +100,9 @@ manhattan_plot = function(probe, region = NULL, array = c('450K', 'EPIC'), FDR =
 	# create dataframes for plotting probes and regions
 	chrdf = processdf1(probe) 
 	don = processdf2(chrdf, probe)
-	don_reg = processdf2(chrdf, region)
+	if (!is.null(region)){
+		don_reg = processdf2(chrdf, region)
+	}
 	
 	axisdf = data.frame(chr = unique(probe$chr), center = NA)
 	axisdf = axisdf[order(axisdf$chr),]
