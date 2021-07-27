@@ -57,11 +57,13 @@ manhattan_plot = function(probe, region = NULL, array = c('450K', 'EPIC'), FDR =
 	if (!('chr' %in% colnames(probe))){
 		if (array == '450K'){
 			data(Locations, package = 'IlluminaHumanMethylation450kanno.ilmn12.hg19')
-			probe = cbind(probe, Locations[,c('chr', 'pos')][match(probe$cpg, rownames(Locations))])
+			probe = cbind(probe, Locations[,c('chr')][match(probe$cpg, rownames(Locations))])
+			probe = cbind(probe, Locations[,c('pos')][match(probe$cpg, rownames(Locations))])
 		}
 		if (array == 'EPIC'){
 			data(Locations, package = 'IlluminaHumanMethylationEPICanno.ilm10b4.hg19')
-			probe = cbind(probe, Locations[,c('chr', 'pos')][match(probe$cpg, rownames(Locations))])
+			probe = cbind(probe, Locations[,c('chr')][match(probe$cpg, rownames(Locations))])
+			probe = cbind(probe, Locations[,c('pos')][match(probe$cpg, rownames(Locations))])
 		}
 		probe = data.frame(probe)
 	}
