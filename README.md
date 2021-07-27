@@ -2,12 +2,6 @@
 
 Common functions for plotting results of epigenome-wide association studies (EWAS) implemented in R and based on [ggplot2](https://ggplot2.tidyverse.org/).
 
-Before using EWAS plot, please install and attach gglot2:
-```
-install.packages('ggplot2')
-library(ggplot2)
-```
-
 To install EWAS plot:
 ```
 devtools::install_github("annebozack/EWASplot")
