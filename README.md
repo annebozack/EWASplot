@@ -32,6 +32,15 @@ volcano_plot(probes$P.Value, probes$logFC, FDR = T)
 
 Manhattan plot of p-values and genomic locations. If results from 450K or EPIC analyses are provided with genomic locations, probes will be annotated using Bioconductor annotation packages. The locations of regions can also be plotted by providing a region argument. Aesthetics including point size and color can be modified.
 
+If probes are to be annotated, please be sure the correct annotation package is installed, e.g.:
+```
+BiocManager::install("IlluminaHumanMethylation450kanno.ilmn12.hg19")
+```
+
+```
+BiocManager::install("IlluminaHumanMethylationEPICanno.ilm10b4.hg19")
+```
+
 ```
 manhattan_plot(probes, regions, FDR = T)
 ```
