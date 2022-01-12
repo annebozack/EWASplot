@@ -76,6 +76,9 @@ manhattan_plot = function(probe, region = NULL, array = c('450K', 'EPIC'), FDR =
 	if (!is.numeric(probe$chr)){
 		probe$chr = as.numeric(gsub("chr", "", probe$chr))
 	}
+	if (!is.numeric(region$chr)){
+		region$chr = as.numeric(gsub("chr", "", region$chr))
+	}
 	
 	# Bonferroni and FDR adjustment of p-values
 	probe$bonf = p.adjust(probe$P.Value, method = 'bonferroni')
