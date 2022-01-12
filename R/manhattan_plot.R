@@ -107,6 +107,7 @@ manhattan_plot = function(probe, region = NULL, array = c('450K', 'EPIC'), FDR =
 	chrdf = processdf1(probe) 
 	don = processdf2(chrdf, probe)
 	if (!is.null(region)){
+		region$pos = region$start
 		don_reg = processdf2(chrdf, region)
 	}
 	
