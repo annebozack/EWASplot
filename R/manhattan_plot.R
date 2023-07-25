@@ -76,7 +76,7 @@ manhattan_plot = function(probe, region = NULL, array = c('450K', 'EPIC'), FDR =
 	if (!is.numeric(probe$chr)){
 		probe$chr = as.numeric(gsub("chr", "", probe$chr))
 	}
-	if (!is.numeric(region$chr)){
+	if (!is.null(region) & !is.numeric(region$chr)){
 		region$chr = as.numeric(gsub("chr", "", region$chr))
 	}
 	
